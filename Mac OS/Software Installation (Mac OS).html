@@ -1,0 +1,4273 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>Software Installation (Mac OS) - HackMD</title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      href="https://hackmd.io/apple-touch-icon.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+      integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css"
+      integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css"
+      integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css"
+      integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU="
+      crossorigin="anonymous"
+    />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);
+      .hljs {
+        background: #fff;
+        color: #333;
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+      }
+      .hljs-comment,
+      .hljs-meta {
+        color: #969896;
+      }
+      .hljs-emphasis,
+      .hljs-quote,
+      .hljs-string,
+      .hljs-strong,
+      .hljs-template-variable,
+      .hljs-variable {
+        color: #df5000;
+      }
+      .hljs-keyword,
+      .hljs-selector-tag,
+      .hljs-type {
+        color: #a71d5d;
+      }
+      .hljs-attribute,
+      .hljs-bullet,
+      .hljs-literal,
+      .hljs-number,
+      .hljs-symbol {
+        color: #0086b3;
+      }
+      .hljs-built_in,
+      .hljs-builtin-name {
+        color: #005cc5;
+      }
+      .hljs-name,
+      .hljs-section {
+        color: #63a35c;
+      }
+      .hljs-tag {
+        color: #333;
+      }
+      .hljs-attr,
+      .hljs-selector-attr,
+      .hljs-selector-class,
+      .hljs-selector-id,
+      .hljs-selector-pseudo,
+      .hljs-title {
+        color: #795da3;
+      }
+      .hljs-addition {
+        background-color: #eaffea;
+        color: #55a532;
+      }
+      .hljs-deletion {
+        background-color: #ffecec;
+        color: #bd2c00;
+      }
+      .hljs-link {
+        text-decoration: underline;
+      }
+      .markdown-body {
+        word-wrap: break-word;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      .markdown-body:after,
+      .markdown-body:before {
+        content: "";
+        display: table;
+      }
+      .markdown-body:after {
+        clear: both;
+      }
+      .markdown-body > :first-child {
+        margin-top: 0 !important;
+      }
+      .markdown-body > :last-child {
+        margin-bottom: 0 !important;
+      }
+      .markdown-body a:not([href]) {
+        color: inherit;
+        text-decoration: none;
+      }
+      .markdown-body .absent {
+        color: #c00;
+      }
+      .markdown-body .anchor {
+        float: left;
+        line-height: 1;
+        margin-left: -20px;
+        padding-right: 4px;
+      }
+      .markdown-body .anchor:focus {
+        outline: none;
+      }
+      .markdown-body blockquote,
+      .markdown-body dl,
+      .markdown-body ol,
+      .markdown-body p,
+      .markdown-body pre,
+      .markdown-body table,
+      .markdown-body ul {
+        margin-bottom: 16px;
+        margin-top: 0;
+      }
+      .markdown-body hr {
+        background-color: #e7e7e7;
+        border: 0;
+        height: 0.25em;
+        margin: 24px 0;
+        padding: 0;
+      }
+      .markdown-body blockquote {
+        border-left: 0.25em solid #ddd;
+        color: #777;
+        font-size: 16px;
+        padding: 0 1em;
+      }
+      .markdown-body blockquote > :first-child {
+        margin-top: 0;
+      }
+      .markdown-body blockquote > :last-child {
+        margin-bottom: 0;
+      }
+      .markdown-body kbd,
+      .popover kbd {
+        background-color: #fcfcfc;
+        border: 1px solid;
+        border-color: #ccc #ccc #bbb;
+        border-radius: 3px;
+        box-shadow: inset 0 -1px 0 #bbb;
+        color: #555;
+        display: inline-block;
+        font-size: 11px;
+        line-height: 10px;
+        padding: 3px 5px;
+        vertical-align: middle;
+      }
+      .markdown-body .loweralpha {
+        list-style-type: lower-alpha;
+      }
+      .markdown-body h1,
+      .markdown-body h2,
+      .markdown-body h3,
+      .markdown-body h4,
+      .markdown-body h5,
+      .markdown-body h6 {
+        font-weight: 600;
+        line-height: 1.25;
+        margin-bottom: 16px;
+        margin-top: 24px;
+      }
+      .markdown-body h1 .octicon-link,
+      .markdown-body h2 .octicon-link,
+      .markdown-body h3 .octicon-link,
+      .markdown-body h4 .octicon-link,
+      .markdown-body h5 .octicon-link,
+      .markdown-body h6 .octicon-link {
+        color: #000;
+        vertical-align: middle;
+        visibility: hidden;
+      }
+      .markdown-body h1:hover .anchor,
+      .markdown-body h2:hover .anchor,
+      .markdown-body h3:hover .anchor,
+      .markdown-body h4:hover .anchor,
+      .markdown-body h5:hover .anchor,
+      .markdown-body h6:hover .anchor {
+        text-decoration: none;
+      }
+      .markdown-body h1:hover .anchor .octicon-link,
+      .markdown-body h2:hover .anchor .octicon-link,
+      .markdown-body h3:hover .anchor .octicon-link,
+      .markdown-body h4:hover .anchor .octicon-link,
+      .markdown-body h5:hover .anchor .octicon-link,
+      .markdown-body h6:hover .anchor .octicon-link {
+        visibility: visible;
+      }
+      .markdown-body h1 code,
+      .markdown-body h1 tt,
+      .markdown-body h2 code,
+      .markdown-body h2 tt,
+      .markdown-body h3 code,
+      .markdown-body h3 tt,
+      .markdown-body h4 code,
+      .markdown-body h4 tt,
+      .markdown-body h5 code,
+      .markdown-body h5 tt,
+      .markdown-body h6 code,
+      .markdown-body h6 tt {
+        font-size: inherit;
+      }
+      .markdown-body h1 {
+        font-size: 2em;
+      }
+      .markdown-body h1,
+      .markdown-body h2 {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.3em;
+      }
+      .markdown-body h2 {
+        font-size: 1.5em;
+      }
+      .markdown-body h3 {
+        font-size: 1.25em;
+      }
+      .markdown-body h4 {
+        font-size: 1em;
+      }
+      .markdown-body h5 {
+        font-size: 0.875em;
+      }
+      .markdown-body h6 {
+        color: #777;
+        font-size: 0.85em;
+      }
+      .markdown-body ol,
+      .markdown-body ul {
+        padding-left: 2em;
+      }
+      .markdown-body ol.no-list,
+      .markdown-body ul.no-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      .markdown-body ol ol,
+      .markdown-body ol ul,
+      .markdown-body ul ol,
+      .markdown-body ul ul {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+      .markdown-body li > p {
+        margin-top: 16px;
+      }
+      .markdown-body li + li {
+        padding-top: 0.25em;
+      }
+      .markdown-body dl {
+        padding: 0;
+      }
+      .markdown-body dl dt {
+        font-size: 1em;
+        font-style: italic;
+        font-weight: 700;
+        margin-top: 16px;
+        padding: 0;
+      }
+      .markdown-body dl dd {
+        margin-bottom: 16px;
+        padding: 0 16px;
+      }
+      .markdown-body table {
+        display: block;
+        overflow: auto;
+        width: 100%;
+        word-break: normal;
+        word-break: keep-all;
+      }
+      .markdown-body table th {
+        font-weight: 700;
+      }
+      .markdown-body table td,
+      .markdown-body table th {
+        border: 1px solid #ddd;
+        padding: 6px 13px;
+      }
+      .markdown-body table tr {
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+      }
+      .markdown-body table tr:nth-child(2n) {
+        background-color: #f8f8f8;
+      }
+      .markdown-body img {
+        background-color: #fff;
+        box-sizing: initial;
+        max-width: 100%;
+      }
+      .markdown-body img[align="right"] {
+        padding-left: 20px;
+      }
+      .markdown-body img[align="left"] {
+        padding-right: 20px;
+      }
+      .markdown-body .emoji {
+        background-color: initial;
+        max-width: none;
+        vertical-align: text-top;
+      }
+      .markdown-body span.frame {
+        display: block;
+        overflow: hidden;
+      }
+      .markdown-body span.frame > span {
+        border: 1px solid #ddd;
+        display: block;
+        float: left;
+        margin: 13px 0 0;
+        overflow: hidden;
+        padding: 7px;
+        width: auto;
+      }
+      .markdown-body span.frame span img {
+        display: block;
+        float: left;
+      }
+      .markdown-body span.frame span span {
+        clear: both;
+        color: #333;
+        display: block;
+        padding: 5px 0 0;
+      }
+      .markdown-body span.align-center {
+        clear: both;
+        display: block;
+        overflow: hidden;
+      }
+      .markdown-body span.align-center > span {
+        display: block;
+        margin: 13px auto 0;
+        overflow: hidden;
+        text-align: center;
+      }
+      .markdown-body span.align-center span img {
+        margin: 0 auto;
+        text-align: center;
+      }
+      .markdown-body span.align-right {
+        clear: both;
+        display: block;
+        overflow: hidden;
+      }
+      .markdown-body span.align-right > span {
+        display: block;
+        margin: 13px 0 0;
+        overflow: hidden;
+        text-align: right;
+      }
+      .markdown-body span.align-right span img {
+        margin: 0;
+        text-align: right;
+      }
+      .markdown-body span.float-left {
+        display: block;
+        float: left;
+        margin-right: 13px;
+        overflow: hidden;
+      }
+      .markdown-body span.float-left span {
+        margin: 13px 0 0;
+      }
+      .markdown-body span.float-right {
+        display: block;
+        float: right;
+        margin-left: 13px;
+        overflow: hidden;
+      }
+      .markdown-body span.float-right > span {
+        display: block;
+        margin: 13px auto 0;
+        overflow: hidden;
+        text-align: right;
+      }
+      .markdown-body code,
+      .markdown-body tt {
+        background-color: #0000000a;
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: 0.2em 0;
+      }
+      .markdown-body code:after,
+      .markdown-body code:before,
+      .markdown-body tt:after,
+      .markdown-body tt:before {
+        content: "\00a0";
+        letter-spacing: -0.2em;
+      }
+      .markdown-body code br,
+      .markdown-body tt br {
+        display: none;
+      }
+      .markdown-body del code {
+        text-decoration: inherit;
+      }
+      .markdown-body pre {
+        word-wrap: normal;
+      }
+      .markdown-body pre > code {
+        background: #0000;
+        border: 0;
+        font-size: 100%;
+        margin: 0;
+        padding: 0;
+        white-space: pre;
+        word-break: normal;
+      }
+      .markdown-body .highlight {
+        margin-bottom: 16px;
+      }
+      .markdown-body .highlight pre {
+        margin-bottom: 0;
+        word-break: normal;
+      }
+      .markdown-body .highlight pre,
+      .markdown-body pre {
+        border-radius: 3px;
+        font-size: 85%;
+        line-height: 1.45;
+        overflow: auto;
+      }
+      .markdown-body:not(.next-editor) pre {
+        background-color: #f7f7f7;
+        padding: 16px;
+      }
+      .markdown-body pre code,
+      .markdown-body pre tt {
+        word-wrap: normal;
+        background-color: initial;
+        border: 0;
+        display: inline;
+        line-height: inherit;
+        margin: 0;
+        max-width: auto;
+        overflow: visible;
+        padding: 0;
+      }
+      .markdown-body pre code:after,
+      .markdown-body pre code:before,
+      .markdown-body pre tt:after,
+      .markdown-body pre tt:before {
+        content: normal;
+      }
+      .markdown-body .csv-data td,
+      .markdown-body .csv-data th {
+        font-size: 12px;
+        line-height: 1;
+        overflow: hidden;
+        padding: 5px;
+        text-align: left;
+        white-space: nowrap;
+      }
+      .markdown-body .csv-data .blob-line-num {
+        background: #fff;
+        border: 0;
+        padding: 10px 8px 9px;
+        text-align: right;
+      }
+      .markdown-body .csv-data tr {
+        border-top: 0;
+      }
+      .markdown-body .csv-data th {
+        background: #f8f8f8;
+        border-top: 0;
+        font-weight: 700;
+      }
+      .news .alert .markdown-body blockquote {
+        border: 0;
+        padding: 0 0 0 40px;
+      }
+      .activity-tab .news .alert .commits,
+      .activity-tab .news .markdown-body blockquote {
+        padding-left: 0;
+      }
+      .task-list-item {
+        list-style-type: none;
+      }
+      .task-list-item label {
+        font-weight: 400;
+      }
+      .task-list-item.enabled label {
+        cursor: pointer;
+      }
+      .task-list-item + .task-list-item {
+        margin-top: 3px;
+      }
+      .task-list-item-checkbox {
+        cursor: default !important;
+        float: left;
+        margin: 0.31em 0 0.2em -1.3em !important;
+        vertical-align: middle;
+      }
+      .markdown-body {
+        max-width: 758px;
+        overflow: visible !important;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        position: relative;
+      }
+      .markdown-body.next-editor {
+        overflow-x: hidden !important;
+      }
+      .markdown-body .emoji {
+        vertical-align: top;
+      }
+      .markdown-body pre {
+        border: inherit !important;
+      }
+      .markdown-body code {
+        color: inherit !important;
+      }
+      .markdown-body pre code .wrapper {
+        display: -moz-inline-flex;
+        display: -ms-inline-flex;
+        display: -o-inline-flex;
+        display: inline-flex;
+      }
+      .markdown-body pre code .gutter {
+        float: left;
+        overflow: hidden;
+        -webkit-user-select: none;
+        user-select: none;
+      }
+      .markdown-body pre code .gutter.linenumber {
+        border-right: 3px solid #6ce26c !important;
+        box-sizing: initial;
+        color: #afafaf !important;
+        cursor: default;
+        display: inline-block;
+        min-width: 20px;
+        padding: 0 8px 0 0;
+        position: relative;
+        text-align: right;
+        z-index: 4;
+      }
+      .markdown-body pre code .gutter.linenumber > span:before {
+        content: attr(data-linenumber);
+      }
+      .markdown-body pre code .code {
+        float: left;
+        margin: 0 0 0 16px;
+      }
+      .markdown-body .gist .line-numbers {
+        border-bottom: none;
+        border-left: none;
+        border-top: none;
+      }
+      .markdown-body .gist .line-data {
+        border: none;
+      }
+      .markdown-body .gist table {
+        border-collapse: inherit !important;
+        border-spacing: 0;
+      }
+      .markdown-body code[data-gist-id] {
+        background: none;
+        padding: 0;
+      }
+      .markdown-body code[data-gist-id]:after,
+      .markdown-body code[data-gist-id]:before {
+        content: "";
+      }
+      .markdown-body code[data-gist-id] .blob-num {
+        border: unset;
+      }
+      .markdown-body code[data-gist-id] table {
+        margin-bottom: unset;
+        overflow: unset;
+      }
+      .markdown-body code[data-gist-id] table tr {
+        background: unset;
+      }
+      .markdown-body[dir="rtl"] pre {
+        direction: ltr;
+      }
+      .markdown-body[dir="rtl"] code {
+        direction: ltr;
+        unicode-bidi: embed;
+      }
+      .markdown-body .alert {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .markdown-body .alert > * {
+        margin: 0;
+      }
+      .markdown-body pre.abc,
+      .markdown-body pre.flow-chart,
+      .markdown-body pre.graphviz,
+      .markdown-body pre.mermaid,
+      .markdown-body pre.sequence-diagram,
+      .markdown-body pre.vega {
+        background-color: inherit;
+        border-radius: 0;
+        overflow: visible;
+        text-align: center;
+        white-space: inherit;
+      }
+      .markdown-body pre.abc > code,
+      .markdown-body pre.flow-chart > code,
+      .markdown-body pre.graphviz > code,
+      .markdown-body pre.mermaid > code,
+      .markdown-body pre.sequence-diagram > code,
+      .markdown-body pre.vega > code {
+        text-align: left;
+      }
+      .markdown-body pre.abc > svg,
+      .markdown-body pre.flow-chart > svg,
+      .markdown-body pre.graphviz > svg,
+      .markdown-body pre.mermaid > svg,
+      .markdown-body pre.sequence-diagram > svg,
+      .markdown-body pre.vega > svg {
+        height: 100%;
+        max-width: 100%;
+      }
+      .markdown-body pre > code.wrap {
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+      }
+      .markdown-body summary {
+        display: list-item;
+      }
+      .markdown-body summary:focus {
+        outline: none;
+      }
+      .markdown-body details summary {
+        cursor: pointer;
+      }
+      .markdown-body details:not([open]) > :not(summary) {
+        display: none;
+      }
+      .markdown-body figure {
+        margin: 1em 40px;
+      }
+      .markdown-body .mark,
+      .markdown-body mark {
+        background-color: #fff1a7;
+      }
+      .vimeo,
+      .youtube {
+        background-color: #000;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        display: table;
+        overflow: hidden;
+        text-align: center;
+      }
+      .vimeo,
+      .youtube {
+        position: relative;
+        width: 100%;
+      }
+      .youtube {
+        padding-bottom: 56.25%;
+      }
+      .vimeo img {
+        object-fit: contain;
+        width: 100%;
+        z-index: 0;
+      }
+      .youtube img {
+        object-fit: cover;
+        z-index: 0;
+      }
+      .vimeo iframe,
+      .youtube iframe,
+      .youtube img {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+      .vimeo iframe,
+      .youtube iframe {
+        vertical-align: middle;
+        z-index: 1;
+      }
+      .vimeo .icon,
+      .youtube .icon {
+        color: #fff;
+        height: auto;
+        left: 50%;
+        opacity: 0.3;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity 0.2s;
+        width: auto;
+        z-index: 0;
+      }
+      .vimeo:hover .icon,
+      .youtube:hover .icon {
+        opacity: 0.6;
+        transition: opacity 0.2s;
+      }
+      .slideshare .inner,
+      .speakerdeck .inner {
+        position: relative;
+        width: 100%;
+      }
+      .slideshare .inner iframe,
+      .speakerdeck .inner iframe {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+      }
+      .figma {
+        display: table;
+        padding-bottom: 56.25%;
+        position: relative;
+        width: 100%;
+      }
+      .figma iframe {
+        border: 1px solid #eee;
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+      }
+      .markmap-container {
+        height: 300px;
+      }
+      .markmap-container > svg {
+        height: 100%;
+        width: 100%;
+      }
+      .MJX_Assistive_MathML {
+        display: none;
+      }
+      #MathJax_Message {
+        z-index: 1000 !important;
+      }
+      .ui-infobar {
+        color: #777;
+        margin: 25px auto -25px;
+        max-width: 760px;
+        position: relative;
+        z-index: 2;
+      }
+      .toc .invisable-node {
+        list-style-type: none;
+      }
+      .ui-toc {
+        bottom: 20px;
+        position: fixed;
+        z-index: 998;
+      }
+      .ui-toc.both-mode {
+        margin-left: 8px;
+      }
+      .ui-toc.both-mode .ui-toc-label {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        height: 40px;
+        padding: 10px 4px;
+      }
+      .ui-toc-label {
+        background-color: #e6e6e6;
+        border: none;
+        color: #868686;
+        transition: opacity 0.2s;
+      }
+      .ui-toc .open .ui-toc-label {
+        color: #fff;
+        opacity: 1;
+        transition: opacity 0.2s;
+      }
+      .ui-toc-label:focus {
+        background-color: #ccc;
+        color: #000;
+        opacity: 0.3;
+      }
+      .ui-toc-label:hover {
+        background-color: #ccc;
+        opacity: 1;
+        transition: opacity 0.2s;
+      }
+      .ui-toc-dropdown {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        max-height: 70vh;
+        max-width: 45vw;
+        overflow: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: inherit;
+        width: 25vw;
+      }
+      .ui-toc-dropdown > .toc {
+        max-height: calc(70vh - 100px);
+        overflow: auto;
+      }
+      .ui-toc-dropdown[dir="rtl"] .nav {
+        letter-spacing: 0.0029em;
+        padding-right: 0;
+      }
+      .ui-toc-dropdown a {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: pre;
+      }
+      .ui-toc-dropdown .nav > li > a {
+        color: #767676;
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 4px 20px;
+      }
+      .ui-toc-dropdown .nav > li:first-child:last-child > ul,
+      .ui-toc-dropdown .toc.expand ul {
+        display: block;
+      }
+      .ui-toc-dropdown .nav > li > a:focus,
+      .ui-toc-dropdown .nav > li > a:hover {
+        background-color: initial;
+        border-left: 1px solid #000;
+        color: #000;
+        padding-left: 19px;
+        text-decoration: none;
+      }
+      .ui-toc-dropdown[dir="rtl"] .nav > li > a:focus,
+      .ui-toc-dropdown[dir="rtl"] .nav > li > a:hover {
+        border-left: none;
+        border-right: 1px solid #000;
+        padding-right: 19px;
+      }
+      .ui-toc-dropdown .nav > .active:focus > a,
+      .ui-toc-dropdown .nav > .active:hover > a,
+      .ui-toc-dropdown .nav > .active > a {
+        background-color: initial;
+        border-left: 2px solid #000;
+        color: #000;
+        font-weight: 700;
+        padding-left: 18px;
+      }
+      .ui-toc-dropdown[dir="rtl"] .nav > .active:focus > a,
+      .ui-toc-dropdown[dir="rtl"] .nav > .active:hover > a,
+      .ui-toc-dropdown[dir="rtl"] .nav > .active > a {
+        border-left: none;
+        border-right: 2px solid #000;
+        padding-right: 18px;
+      }
+      .ui-toc-dropdown .nav .nav {
+        display: none;
+        padding-bottom: 10px;
+      }
+      .ui-toc-dropdown .nav > .active > ul {
+        display: block;
+      }
+      .ui-toc-dropdown .nav .nav > li > a {
+        font-size: 12px;
+        font-weight: 400;
+        padding-bottom: 1px;
+        padding-left: 30px;
+        padding-top: 1px;
+      }
+      .ui-toc-dropdown[dir="rtl"] .nav .nav > li > a {
+        padding-right: 30px;
+      }
+      .ui-toc-dropdown .nav .nav > li > ul > li > a {
+        font-size: 12px;
+        font-weight: 400;
+        padding-bottom: 1px;
+        padding-left: 40px;
+        padding-top: 1px;
+      }
+      .ui-toc-dropdown[dir="rtl"] .nav .nav > li > ul > li > a {
+        padding-right: 40px;
+      }
+      .ui-toc-dropdown .nav .nav > li > a:focus,
+      .ui-toc-dropdown .nav .nav > li > a:hover {
+        padding-left: 29px;
+      }
+      .ui-toc-dropdown[dir="rtl"] .nav .nav > li > a:focus,
+      .ui-toc-dropdown[dir="rtl"] .nav .nav > li > a:hover {
+        padding-right: 29px;
+      }
+      .ui-toc-dropdown .nav .nav > li > ul > li > a:focus,
+      .ui-toc-dropdown .nav .nav > li > ul > li > a:hover {
+        padding-left: 39px;
+      }
+      .ui-toc-dropdown[dir="rtl"] .nav .nav > li > ul > li > a:focus,
+      .ui-toc-dropdown[dir="rtl"] .nav .nav > li > ul > li > a:hover {
+        padding-right: 39px;
+      }
+      .ui-toc-dropdown .nav .nav > .active:focus > a,
+      .ui-toc-dropdown .nav .nav > .active:hover > a,
+      .ui-toc-dropdown .nav .nav > .active > a {
+        font-weight: 500;
+        padding-left: 28px;
+      }
+      .ui-toc-dropdown[dir="rtl"] .nav .nav > .active:focus > a,
+      .ui-toc-dropdown[dir="rtl"] .nav .nav > .active:hover > a,
+      .ui-toc-dropdown[dir="rtl"] .nav .nav > .active > a {
+        padding-right: 28px;
+      }
+      .ui-toc-dropdown .nav .nav > .active > .nav > .active:focus > a,
+      .ui-toc-dropdown .nav .nav > .active > .nav > .active:hover > a,
+      .ui-toc-dropdown .nav .nav > .active > .nav > .active > a {
+        font-weight: 500;
+        padding-left: 38px;
+      }
+      .ui-toc-dropdown[dir="rtl"]
+        .nav
+        .nav
+        > .active
+        > .nav
+        > .active:focus
+        > a,
+      .ui-toc-dropdown[dir="rtl"]
+        .nav
+        .nav
+        > .active
+        > .nav
+        > .active:hover
+        > a,
+      .ui-toc-dropdown[dir="rtl"] .nav .nav > .active > .nav > .active > a {
+        padding-right: 38px;
+      }
+      .markdown-body {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue,
+          Helvetica, Roboto, Arial, sans-serif, Apple Color Emoji,
+          Segoe UI Emoji, Segoe UI Symbol;
+      }
+      html[lang^="ja"] .markdown-body {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue,
+          Helvetica, Roboto, Arial, Hiragino Kaku Gothic Pro,
+          ヒラギノ角ゴ Pro W3, Osaka, Meiryo, メイリオ, MS Gothic, ＭＳ ゴシック,
+          sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+      }
+      html[lang="zh-tw"] .markdown-body {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue,
+          Helvetica, Roboto, Arial, PingFang TC, Microsoft JhengHei, 微軟正黑,
+          sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+      }
+      html[lang="zh-cn"] .markdown-body {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue,
+          Helvetica, Roboto, Arial, PingFang SC, Microsoft YaHei, 微软雅黑,
+          sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+      }
+      html .markdown-body[lang^="ja"] {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue,
+          Helvetica, Roboto, Arial, Hiragino Kaku Gothic Pro,
+          ヒラギノ角ゴ Pro W3, Osaka, Meiryo, メイリオ, MS Gothic, ＭＳ ゴシック,
+          sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+      }
+      html .markdown-body[lang="zh-tw"] {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue,
+          Helvetica, Roboto, Arial, PingFang TC, Microsoft JhengHei, 微軟正黑,
+          sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+      }
+      html .markdown-body[lang="zh-cn"] {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue,
+          Helvetica, Roboto, Arial, PingFang SC, Microsoft YaHei, 微软雅黑,
+          sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+      }
+      html[lang^="ja"] .ui-toc-dropdown {
+        font-family: Source Sans Pro, Helvetica, Arial, Meiryo UI, MS PGothic,
+          ＭＳ Ｐゴシック, sans-serif;
+      }
+      html[lang="zh-tw"] .ui-toc-dropdown {
+        font-family: Source Sans Pro, Helvetica, Arial, Microsoft JhengHei UI,
+          微軟正黑UI, sans-serif;
+      }
+      html[lang="zh-cn"] .ui-toc-dropdown {
+        font-family: Source Sans Pro, Helvetica, Arial, Microsoft YaHei UI,
+          微软雅黑UI, sans-serif;
+      }
+      html .ui-toc-dropdown[lang^="ja"] {
+        font-family: Source Sans Pro, Helvetica, Arial, Meiryo UI, MS PGothic,
+          ＭＳ Ｐゴシック, sans-serif;
+      }
+      html .ui-toc-dropdown[lang="zh-tw"] {
+        font-family: Source Sans Pro, Helvetica, Arial, Microsoft JhengHei UI,
+          微軟正黑UI, sans-serif;
+      }
+      html .ui-toc-dropdown[lang="zh-cn"] {
+        font-family: Source Sans Pro, Helvetica, Arial, Microsoft YaHei UI,
+          微软雅黑UI, sans-serif;
+      }
+      .ui-affix-toc {
+        max-height: 70vh;
+        max-width: 15vw;
+        overflow: auto;
+        position: fixed;
+        top: 0;
+      }
+      .back-to-top,
+      .expand-toggle,
+      .go-to-bottom {
+        color: #999;
+        display: block;
+        font-size: 12px;
+        font-weight: 500;
+        margin-left: 10px;
+        margin-top: 10px;
+        padding: 4px 10px;
+      }
+      .back-to-top:focus,
+      .back-to-top:hover,
+      .expand-toggle:focus,
+      .expand-toggle:hover,
+      .go-to-bottom:focus,
+      .go-to-bottom:hover {
+        color: #563d7c;
+        text-decoration: none;
+      }
+      .back-to-top,
+      .go-to-bottom {
+        margin-top: 0;
+      }
+      .ui-user-icon {
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        display: block;
+        height: 20px;
+        margin-bottom: 2px;
+        margin-right: 5px;
+        margin-top: 2px;
+        width: 20px;
+      }
+      .ui-user-icon.small {
+        display: inline-block;
+        height: 18px;
+        margin: 0 0 0.2em;
+        vertical-align: middle;
+        width: 18px;
+      }
+      .ui-infobar > small > span {
+        line-height: 22px;
+      }
+      .ui-infobar > small .dropdown {
+        display: inline-block;
+      }
+      .ui-infobar > small .dropdown a:focus,
+      .ui-infobar > small .dropdown a:hover {
+        text-decoration: none;
+      }
+      .ui-more-info {
+        color: #888;
+        cursor: pointer;
+        vertical-align: middle;
+      }
+      .ui-more-info .fa {
+        font-size: 16px;
+      }
+      .ui-connectedGithub,
+      .ui-published-note {
+        color: #888;
+      }
+      .ui-connectedGithub {
+        line-height: 23px;
+        white-space: nowrap;
+      }
+      .ui-connectedGithub a.file-path {
+        color: #888;
+        padding-left: 22px;
+        text-decoration: none;
+      }
+      .ui-connectedGithub a.file-path:active,
+      .ui-connectedGithub a.file-path:hover {
+        color: #888;
+        text-decoration: underline;
+      }
+      .ui-connectedGithub .fa {
+        font-size: 20px;
+      }
+      .ui-published-note .fa {
+        font-size: 20px;
+        vertical-align: top;
+      }
+      .unselectable {
+        -webkit-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      }
+      .selectable {
+        -webkit-user-select: text;
+        -o-user-select: text;
+        user-select: text;
+      }
+      .inline-spoiler-section {
+        cursor: pointer;
+      }
+      .inline-spoiler-section .spoiler-text {
+        background-color: #333;
+        border-radius: 2px;
+      }
+      .inline-spoiler-section .spoiler-text > * {
+        opacity: 0;
+      }
+      .inline-spoiler-section .spoiler-img {
+        filter: blur(10px);
+      }
+      .inline-spoiler-section.raw {
+        background-color: #333;
+        border-radius: 2px;
+      }
+      .inline-spoiler-section.raw > * {
+        opacity: 0;
+      }
+      .inline-spoiler-section.unveil {
+        cursor: auto;
+      }
+      .inline-spoiler-section.unveil .spoiler-text {
+        background-color: #3333331a;
+      }
+      .inline-spoiler-section.unveil .spoiler-text > * {
+        opacity: 1;
+      }
+      .inline-spoiler-section.unveil .spoiler-img {
+        filter: none;
+      }
+      @media print {
+        blockquote,
+        div,
+        img,
+        pre,
+        table {
+          page-break-inside: avoid !important;
+        }
+        a[href]:after {
+          font-size: 12px !important;
+        }
+      }
+      .markdown-body.slides {
+        color: #222;
+        position: relative;
+        z-index: 1;
+      }
+      .markdown-body.slides:before {
+        background-color: currentColor;
+        bottom: 0;
+        box-shadow: 0 0 0 50vw;
+        content: "";
+        display: block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+      }
+      .markdown-body.slides section[data-markdown] {
+        background-color: #fff;
+        margin-bottom: 1.5em;
+        position: relative;
+        text-align: center;
+      }
+      .markdown-body.slides section[data-markdown] code {
+        text-align: left;
+      }
+      .markdown-body.slides section[data-markdown]:before {
+        content: "";
+        display: block;
+        padding-bottom: 56.23%;
+      }
+      .markdown-body.slides section[data-markdown] > div:first-child {
+        left: 1em;
+        max-height: 100%;
+        overflow: hidden;
+        position: absolute;
+        right: 1em;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .markdown-body.slides section[data-markdown] > ul {
+        display: inline-block;
+      }
+      .markdown-body.slides > section > section + section:after {
+        border: 3px solid #777;
+        content: "";
+        height: 1.5em;
+        position: absolute;
+        right: 1em;
+        top: -1.5em;
+      }
+      .site-ui-font {
+        font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+      }
+      html[lang^="ja"] .site-ui-font {
+        font-family: Source Sans Pro, Helvetica, Arial, Hiragino Kaku Gothic Pro,
+          ヒラギノ角ゴ Pro W3, Osaka, Meiryo, メイリオ, MS Gothic, ＭＳ ゴシック,
+          sans-serif;
+      }
+      html[lang="zh-tw"] .site-ui-font {
+        font-family: Source Sans Pro, Helvetica, Arial, PingFang TC,
+          Microsoft JhengHei, 微軟正黑, sans-serif;
+      }
+      html[lang="zh-cn"] .site-ui-font {
+        font-family: Source Sans Pro, Helvetica, Arial, PingFang SC,
+          Microsoft YaHei, 微软雅黑, sans-serif;
+      }
+      body {
+        font-smoothing: subpixel-antialiased !important;
+        -webkit-font-smoothing: subpixel-antialiased !important;
+        -moz-osx-font-smoothing: auto !important;
+        -webkit-overflow-scrolling: touch;
+        font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+        letter-spacing: 0.025em;
+      }
+      html[lang^="ja"] body {
+        font-family: Source Sans Pro, Helvetica, Arial, Hiragino Kaku Gothic Pro,
+          ヒラギノ角ゴ Pro W3, Osaka, Meiryo, メイリオ, MS Gothic, ＭＳ ゴシック,
+          sans-serif;
+      }
+      html[lang="zh-tw"] body {
+        font-family: Source Sans Pro, Helvetica, Arial, PingFang TC,
+          Microsoft JhengHei, 微軟正黑, sans-serif;
+      }
+      html[lang="zh-cn"] body {
+        font-family: Source Sans Pro, Helvetica, Arial, PingFang SC,
+          Microsoft YaHei, 微软雅黑, sans-serif;
+      }
+      abbr[title] {
+        border-bottom: none;
+        text-decoration: underline;
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+      abbr[data-original-title],
+      abbr[title] {
+        cursor: help;
+      }
+      body.modal-open {
+        overflow-y: auto;
+        padding-right: 0 !important;
+      }
+      svg {
+        text-shadow: none;
+      }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
+        integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g="
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"
+        integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE="
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"
+        integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo="
+        crossorigin="anonymous"
+      ></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div
+      id="doc"
+      class="markdown-body container-fluid comment-enabled"
+      data-hard-breaks="true"
+    >
+      <h1
+        id="Software-Installation-Mac-OS"
+        data-id="Software-Installation-Mac-OS"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#Software-Installation-Mac-OS"
+          title="Software-Installation-Mac-OS"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Software Installation (Mac OS)</span>
+      </h1>
+      <p>
+        <span>Author: </span
+        ><a
+          href="https://www.linkedin.com/in/vincent-lau-30435bb6/"
+          target="_blank"
+          rel="noopener"
+          ><span>Vincent Lau</span></a
+        ><br />
+        <span
+          >Note: This material is intended for educational purposes only. All
+          rights reserved. Any unauthorized sharing or copying of this material,
+          in any form, to any individual or party, for any use without prior
+          permission, is strictly prohibited.</span
+        >
+      </p>
+      <h3 id="Part-0-Prerequisites" data-id="Part-0-Prerequisites">
+        <a
+          class="anchor hidden-xs"
+          href="#Part-0-Prerequisites"
+          title="Part-0-Prerequisites"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Part 0: Prerequisites</span>
+      </h3>
+      <h3 id="01-Show-Hidden-Folder" data-id="01-Show-Hidden-Folder">
+        <a
+          class="anchor hidden-xs"
+          href="#01-Show-Hidden-Folder"
+          title="01-Show-Hidden-Folder"
+          ><span class="octicon octicon-link"></span></a
+        ><span>0.1 Show Hidden Folder</span>
+      </h3>
+      <ul>
+        <li>
+          <span
+            >Go to your user home directory (Finder), type “Shift + command + .”
+            to show all folders &amp; files. You have to verify the
+            installations by visualizing them later.</span
+          ><br />
+          <strong><span>[Before]</span></strong
+          ><br />
+          <img
+            src="https://hackmd.io/_uploads/By1x1pytn.png"
+            alt=""
+            loading="lazy"
+          />
+        </li>
+      </ul>
+      <p>
+        <strong><span>[After]</span></strong
+        ><br />
+        <span
+          >able to see all hidden folders &amp; files, which is important for
+          installation &amp; development later on.</span
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/BkFlJ6JK3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h3 id="02-Show-File-Extensions" data-id="02-Show-File-Extensions">
+        <a
+          class="anchor hidden-xs"
+          href="#02-Show-File-Extensions"
+          title="02-Show-File-Extensions"
+          ><span class="octicon octicon-link"></span></a
+        ><span>0.2 Show File Extensions</span>
+      </h3>
+      <ul>
+        <li>
+          <span>Finder -&gt; Settings -&gt; Advanced -&gt; Check </span
+          ><strong><span>“Show all filename extensions”</span></strong
+          ><br />
+          <img
+            src="https://hackmd.io/_uploads/SykXkTJYn.png"
+            alt=""
+            loading="lazy"
+          />
+        </li>
+      </ul>
+      <h3 id="03-Mac-OS-Version" data-id="03-Mac-OS-Version">
+        <a
+          class="anchor hidden-xs"
+          href="#03-Mac-OS-Version"
+          title="03-Mac-OS-Version"
+          ><span class="octicon octicon-link"></span></a
+        ><span>0.3 Mac OS Version</span>
+      </h3>
+      <ul>
+        <li>
+          <span>Lots of installation based on </span
+          ><mark><span>mac os version 10.1x +</span></mark
+          ><span>.</span>
+        </li>
+      </ul>
+      <div class="alert alert-danger">
+        <p>
+          <span
+            >If your mac is under 10.1x, please raise it to Tutor/TA before
+            starting the installation.</span
+          >
+        </p>
+      </div>
+      <h3 id="Part-1-Homebrew" data-id="Part-1-Homebrew">
+        <a
+          class="anchor hidden-xs"
+          href="#Part-1-Homebrew"
+          title="Part-1-Homebrew"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Part 1: Homebrew</span>
+      </h3>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/SyLVkTJY2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li>
+          <span>As a developer using mac, you have to try </span
+          ><a href="https://brew.sh" target="_blank" rel="noopener"
+            ><span>Homebrew</span></a
+          ><span>. It makes your life easier.</span>
+        </li>
+        <li>
+          <span
+            >Homebrew installs packages to their own directory and then symlinks
+            their files into</span
+          >
+        </li>
+      </ul>
+      <pre><code>/usr/local 
+</code></pre>
+      <p><span>(on macOS Intel).</span></p>
+      <ul>
+        <li>
+          <span
+            >Homebrew won’t install files outside its prefix and you can place a
+            Homebrew installation wherever you like.</span
+          >
+        </li>
+      </ul>
+      <h3 id="10-Open-Terminal" data-id="10-Open-Terminal">
+        <a
+          class="anchor hidden-xs"
+          href="#10-Open-Terminal"
+          title="10-Open-Terminal"
+          ><span class="octicon octicon-link"></span></a
+        ><span>1.0 Open Terminal</span>
+      </h3>
+      <ul>
+        <li>
+          <strong><span>Command + space</span></strong
+          ><span>, Type </span><strong><span>“Terminal”</span></strong
+          ><span> in the spotlight search bar.</span>
+        </li>
+      </ul>
+      <h4
+        id="11-Install-Homebrew-Follow-the-steps-amp-complete-the-setup"
+        data-id="11-Install-Homebrew-Follow-the-steps-amp-complete-the-setup"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#11-Install-Homebrew-Follow-the-steps-amp-complete-the-setup"
+          title="11-Install-Homebrew-Follow-the-steps-amp-complete-the-setup"
+          ><span class="octicon octicon-link"></span></a
+        ><span
+          >1.1 Install Homebrew (Follow the steps &amp; complete the
+          setup)</span
+        >
+      </h4>
+      <pre><code># via curl
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/r1o61Tktn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li>
+          <span
+            >After installation, there will be 2 commands (refer to below
+            screen) required you to execute.</span
+          >
+          <ul>
+            <li>
+              <span>Add default command to </span
+              ><strong><span>.zprofile</span></strong
+              ><span> (.zprofile is a “start-up” script for terminal)</span
+              ><br />
+              <img
+                src="https://hackmd.io/_uploads/S1PCJa1Fn.png"
+                alt=""
+                loading="lazy"
+              />
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <strong><span>Run it one by one:</span></strong>
+      </p>
+      <pre><code>(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') &gt;&gt; /Users/vincentlau/.zprofile
+</code></pre>
+      <pre><code>eval "$(/opt/homebrew/bin/brew shellenv)"
+</code></pre>
+      <p>
+        <span>Result:</span><br />
+        <img
+          src="https://hackmd.io/_uploads/Hy__0JAn2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <strong><span>Overall Result Check:</span></strong
+        ><br />
+        <strong><span>First</span></strong
+        ><span
+          >, Type “which brew”, it should return the installed location &amp;
+          used location of brew.</span
+        >
+      </p>
+      <pre><code>which brew
+</code></pre>
+      <p>
+        <span
+          >The following is the result for apple chip. A path should be
+          returned, that is correct result.</span
+        ><br />
+        <span>For intel chip, it should be inside /user/local/…</span><br />
+        <img
+          src="https://hackmd.io/_uploads/B1gee6yt2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <strong><span>Secondly</span></strong
+        ><span
+          >, type “echo $ PATH”. This command is to print out the value stored
+          in the variable $PATH.</span
+        >
+      </p>
+      <pre><code>echo $PATH
+</code></pre>
+      <h4 id="Result" data-id="Result">
+        <a class="anchor hidden-xs" href="#Result" title="Result"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Result:</span>
+      </h4>
+      <p>
+        <span
+          >The following is the result for apple chip. A path with brew path
+          should be returned, that is correct result.</span
+        ><br />
+        <span>For intel chip, it should be in /usr/local/…</span><br />
+        <img
+          src="https://hackmd.io/_uploads/B1g-gT1F2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h4 id="12-Other-brew-commands" data-id="12-Other-brew-commands">
+        <a
+          class="anchor hidden-xs"
+          href="#12-Other-brew-commands"
+          title="12-Other-brew-commands"
+          ><span class="octicon octicon-link"></span></a
+        ><span>1.2 Other brew commands</span>
+      </h4>
+      <ul>
+        <li><span>Install wget</span></li>
+      </ul>
+      <pre><code>brew install wget
+</code></pre>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/ryw0g61t2.jpg"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h3 id="Part-2-iTerm2" data-id="Part-2-iTerm2">
+        <a class="anchor hidden-xs" href="#Part-2-iTerm2" title="Part-2-iTerm2"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Part 2: iTerm2</span>
+      </h3>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/SkN-Z61Kh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li><span>macOS 10.14 or later</span></li>
+        <li><span>Alternative for Terminal</span></li>
+        <li>
+          <span
+            >Brings the terminal into the modern age with new &amp; useful
+            features</span
+          >
+        </li>
+      </ul>
+      <h4 id="21-Install-iTerm2-by-brew" data-id="21-Install-iTerm2-by-brew">
+        <a
+          class="anchor hidden-xs"
+          href="#21-Install-iTerm2-by-brew"
+          title="21-Install-iTerm2-by-brew"
+          ><span class="octicon octicon-link"></span></a
+        ><span>2.1 Install iTerm2 (by brew)</span>
+      </h4>
+      <pre><code>brew install --cask iterm2
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/ryuMWa1Yn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li>
+          <span>Check the app </span><strong><span>“iTerm2”</span></strong
+          ><span> in Finder Application, just like a normal Terminal.</span>
+        </li>
+        <li>
+          <span
+            >Keep “iTerm2” in the Dock as you will use it frequently in coming
+            weeks.</span
+          ><br />
+          <img
+            src="https://hackmd.io/_uploads/BkLmWT1Kn.png"
+            alt=""
+            loading="lazy"
+          />
+        </li>
+      </ul>
+      <h4 id="Result1" data-id="Result">
+        <a class="anchor hidden-xs" href="#Result1" title="Result1"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Result:</span>
+      </h4>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/Syh7b6yK2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h3 id="Part-3-ZSH" data-id="Part-3-ZSH">
+        <a class="anchor hidden-xs" href="#Part-3-ZSH" title="Part-3-ZSH"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Part 3: ZSH</span>
+      </h3>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/SkoVbpyFh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li>
+          <a
+            href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH"
+            target="_blank"
+            rel="noopener"
+            ><span>ZSH</span></a
+          ><span
+            >, called the Z shell, is an extended version of the Bourne Shell
+            (sh)</span
+          >
+        </li>
+        <li>
+          <span
+            >It’s based on the same shell as Bash, ZSH has many of the same
+            features, which is easy for everyone to switch over.</span
+          >
+        </li>
+      </ul>
+      <h4 id="31-Install-ZSH-by-brew" data-id="31-Install-ZSH-by-brew">
+        <a
+          class="anchor hidden-xs"
+          href="#31-Install-ZSH-by-brew"
+          title="31-Install-ZSH-by-brew"
+          ><span class="octicon octicon-link"></span></a
+        ><span>3.1 Install ZSH by brew</span>
+      </h4>
+      <ul>
+        <li>
+          <span
+            >Latest mac OS version has built-in zsh already. You may have a
+            check before installation.</span
+          >
+        </li>
+      </ul>
+      <pre><code># Check if you have zsh already:
+which zsh
+</code></pre>
+      <p>
+        <strong><span>[Result]</span></strong
+        ><span>
+          If you have zsh installed (expect MacOS should be with zsh bulit-in),
+          the result should be as belows.</span
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/rk5DWTyF2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <div class="alert alert-warning">
+        <p>
+          <span
+            >[Skip the following 2 steps, if you have zsh already as shown the
+            above.]</span
+          >
+        </p>
+      </div>
+      <h5 id="1-Install-ZSH-amp-put-it" data-id="1-Install-ZSH-amp-put-it">
+        <a
+          class="anchor hidden-xs"
+          href="#1-Install-ZSH-amp-put-it"
+          title="1-Install-ZSH-amp-put-it"
+          ><span class="octicon octicon-link"></span></a
+        ><span>1. Install ZSH &amp; put it</span>
+      </h5>
+      <pre><code>brew install zsh
+</code></pre>
+      <pre><code>sudo sh -c "echo $(which zsh) &gt;&gt; /etc/shells"
+</code></pre>
+      <p><span>Zsh installed by homebrew is in</span></p>
+      <pre><code>/usr/local/bin/zsh
+</code></pre>
+      <p><span>built-in zsh should be located in</span></p>
+      <pre><code>/bin/zsh。
+</code></pre>
+      <h5 id="2-Set-zsh-as-default-shell" data-id="2-Set-zsh-as-default-shell">
+        <a
+          class="anchor hidden-xs"
+          href="#2-Set-zsh-as-default-shell"
+          title="2-Set-zsh-as-default-shell"
+          ><span class="octicon octicon-link"></span></a
+        ><span>2. Set zsh as default shell:</span>
+      </h5>
+      <pre><code>chsh -s $(which zsh)
+</code></pre>
+      <div class="alert alert-success">
+        <p>
+          <span
+            >[Everyone perform the following result checks before
+            proceed.]</span
+          >
+        </p>
+      </div>
+      <h4 id="Result-Check" data-id="Result-Check">
+        <a class="anchor hidden-xs" href="#Result-Check" title="Result-Check"
+          ><span class="octicon octicon-link"></span></a
+        ><span>[Result Check]</span>
+      </h4>
+      <pre><code>zsh --version
+</code></pre>
+      <pre><code>echo $SHELL
+</code></pre>
+      <pre><code>$SHELL --version
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/Sy5kf61t3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h4 id="32-iTerm2-Preference" data-id="32-iTerm2-Preference">
+        <a
+          class="anchor hidden-xs"
+          href="#32-iTerm2-Preference"
+          title="32-iTerm2-Preference"
+          ><span class="octicon octicon-link"></span></a
+        ><span>3.2 iTerm2 Preference</span>
+      </h4>
+      <div class="alert alert-info">
+        <p>
+          <span
+            >iTerm2 -&gt; Settings (Left top corner) -&gt; Profiles -&gt;
+            Terminal</span
+          >
+        </p>
+      </div>
+      <p>
+        <span
+          >Make sure “Character encoding”/ “Report terminal type” are set
+          correctly.</span
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/ryOWzp1Kh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>Font size, select your favourite font size in terminal</span
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/B1hWGTyKn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h3 id="Part-4-Oh-my-zsh" data-id="Part-4-Oh-my-zsh">
+        <a
+          class="anchor hidden-xs"
+          href="#Part-4-Oh-my-zsh"
+          title="Part-4-Oh-my-zsh"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Part 4: Oh-my-zsh</span>
+      </h3>
+      <p>
+        <a
+          href="https://github.com/ohmyzsh/ohmyzsh"
+          target="_blank"
+          rel="noopener"
+          ><span>Oh-My-Zsh</span></a
+        ><span>
+          is the most popular plugin framework for ZSH, and it comes with many
+          built-in plugins and themes. </span
+        ><strong
+          ><span
+            >You can configure your own terminal with useful information, like
+            text highlight/ font style/ system time/ icon/ git status,
+            etc.</span
+          ></strong
+        >
+      </p>
+      <h3 id="41-Install-oh-my-zsh" data-id="41-Install-oh-my-zsh">
+        <a
+          class="anchor hidden-xs"
+          href="#41-Install-oh-my-zsh"
+          title="41-Install-oh-my-zsh"
+          ><span class="octicon octicon-link"></span></a
+        ><span>4.1 Install oh-my-zsh</span>
+      </h3>
+      <pre><code>sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/r1QwzpyYh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span
+          >After installing oh-my-zsh, you should find .zshrc in the home
+          directory.</span
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/BJtvMTJYn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <p>
+        <span>After installed, you will find </span><code>.zshrc</code
+        ><span> in home directory.</span><br />
+        <img
+          src="https://hackmd.io/_uploads/H14OIb023.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>After installed, you will find </span><code>.oh-my-zsh</code
+        ><span> in home directory.</span><br />
+        <img
+          src="https://hackmd.io/_uploads/BkdtLZR2h.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h3 id="43-Install-New-Font" data-id="43-Install-New-Font">
+        <a
+          class="anchor hidden-xs"
+          href="#43-Install-New-Font"
+          title="43-Install-New-Font"
+          ><span class="octicon octicon-link"></span></a
+        ><span>4.3 Install New Font</span>
+      </h3>
+      <ul>
+        <li><span>Clone the cask-fonts library</span></li>
+      </ul>
+      <pre><code>brew tap homebrew/cask-fonts
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/SyXJsbR3h.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li><span>Install Meslo-lg-nerd-font</span></li>
+      </ul>
+      <pre><code>brew install --cask font-meslo-lg-nerd-font
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/r1h42WAnn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li>
+          <span>Update Font setting in iTerm2, use </span
+          ><strong><span>MesloFS Nerd Font</span></strong>
+        </li>
+      </ul>
+      <div class="alert alert-info">
+        <p>
+          <span
+            >iTerm2 -&gt; Settings (Left top corner) -&gt; Profiles -&gt;
+            Terminal</span
+          >
+        </p>
+      </div>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/BJfjjZA22.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h3 id="44-Install-Powerlevel10k" data-id="44-Install-Powerlevel10k">
+        <a
+          class="anchor hidden-xs"
+          href="#44-Install-Powerlevel10k"
+          title="44-Install-Powerlevel10k"
+          ><span class="octicon octicon-link"></span></a
+        ><span>4.4 Install Powerlevel10k</span>
+      </h3>
+      <p>
+        <span
+          >Support special icon font without installing others plugins.</span
+        >
+      </p>
+      <p>
+        <mark><span>Download powerlevel10k from github</span></mark>
+      </p>
+      <pre><code>git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/rJmLmTyFh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <mark><span>Install zsh-autosuggestions</span></mark>
+      </p>
+      <pre><code>git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/rJIw76kK3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <mark><span>Install zsh-syntax-highlighting</span></mark>
+      </p>
+      <pre><code>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/Hkb_76Jt2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p><span>In </span><code>.zshrc</code><span> file, you should:</span></p>
+      <ul>
+        <li>
+          <span>Add this line </span
+          ><code
+            >plugins=(git zsh-syntax-highlighting zsh-autosuggestions)</code
+          >
+        </li>
+        <li>
+          <span>Remove </span><code>plugins=(git)</code><span> by adding </span
+          ><strong><span>#</span></strong
+          ><span> at the beginning of the line.</span>
+        </li>
+        <li><span>Save File</span></li>
+      </ul>
+      <p>
+        <span>Sample: File </span><code>.zshrc</code><br />
+        <img
+          src="https://hackmd.io/_uploads/ry6Y7T1Yn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <p>
+        <span>It should be placed into </span
+        ><mark><span>.oh-my-zsh/custom/themes/powerlevel10k</span></mark
+        ><span> automatically. Please check it carefully.</span><br />
+        <img
+          src="https://hackmd.io/_uploads/ry297TkKh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h3
+        id="45-Change-theme-to-powerlevel10k"
+        data-id="45-Change-theme-to-powerlevel10k"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#45-Change-theme-to-powerlevel10k"
+          title="45-Change-theme-to-powerlevel10k"
+          ><span class="octicon octicon-link"></span></a
+        ><span>4.5 Change theme to powerlevel10k</span>
+      </h3>
+      <ul>
+        <li>
+          <span>Add this line </span
+          ><code>ZSH_THEME="powerlevel10k/powerlevel10k"</code>
+        </li>
+        <li>
+          <span>Remove </span><code>ZSH_THEME="robbyrussell"</code
+          ><span> by adding </span><strong><span>#</span></strong
+          ><span> at the beginning of the line.</span>
+        </li>
+        <li><span>Save File</span></li>
+      </ul>
+      <pre><code># ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/SJQpQaJKh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h3
+        id="46-Execute-zshrc-once-again"
+        data-id="46-Execute-zshrc-once-again"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#46-Execute-zshrc-once-again"
+          title="46-Execute-zshrc-once-again"
+          ><span class="octicon octicon-link"></span></a
+        ><span>4.6 Execute .zshrc once again</span>
+      </h3>
+      <ul>
+        <li>
+          <span
+            >After rerun .zshrc (execute the below command in iTerm2), the
+            configuration interface will be shown.</span
+          >
+        </li>
+        <li><span>OR you can restart iTerm2.</span></li>
+      </ul>
+      <pre><code>source ~/.zshrc
+</code></pre>
+      <h3 id="47-Your-own-theme-style" data-id="47-Your-own-theme-style">
+        <a
+          class="anchor hidden-xs"
+          href="#47-Your-own-theme-style"
+          title="47-Your-own-theme-style"
+          ><span class="octicon octicon-link"></span></a
+        ><span>4.7 Your own theme style</span>
+      </h3>
+      <p><span>Now, you can set up your own favourite style.</span></p>
+      <p>
+        <span
+          >If you see this page, please just type “y” to install the latest
+          version of the “Meslo Nerd Font”.</span
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/r1XJ4T1Fh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <div class="alert alert-warning">
+        <p>
+          <span
+            >It said DON’T exit by just click red circle. You can press command
+            + Q, or iTerm2 -&gt; Quit iTerm2.</span
+          >
+        </p>
+      </div>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/S1bsFMAnh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>Update Font in iTerm2 setting - </span
+        ><strong><span>MesloLGS NF</span></strong
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/H1qacG0hh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p><span>Type “y” if you can see the icon normally:</span></p>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/BkwZEaJY2.png"
+          alt=""
+          loading="lazy"
+        /><br />
+        <img
+          src="https://hackmd.io/_uploads/B1s-VTyY2.png"
+          alt=""
+          loading="lazy"
+        /><br />
+        <img
+          src="https://hackmd.io/_uploads/BkJz4pyY2.png"
+          alt=""
+          loading="lazy"
+        /><br />
+        <img
+          src="https://hackmd.io/_uploads/ry4M4a1F2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>Your choice here: (My Choice: 2)</span><br />
+        <img
+          src="https://hackmd.io/_uploads/S19GE61th.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <mark
+          ><span>Please choose </span><strong><span>Unicode</span></strong
+          ><span>
+            to display those special icons in prompt corrently.</span
+          ></mark
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/ByuXE6JKh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>Your choice: (My Choice 4)</span><br />
+        <img
+          src="https://hackmd.io/_uploads/BJCD4aJF3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>My Choice 5</span><br />
+        <img
+          src="https://hackmd.io/_uploads/BySuVT1F2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>My choice 1</span><br />
+        <img
+          src="https://hackmd.io/_uploads/HJ5uNT1t3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>Show current time &amp; time format (My choice: n)</span><br />
+        <img
+          src="https://hackmd.io/_uploads/HJJK46kKh.png"
+          alt=""
+          loading="lazy"
+        /><br />
+        <img
+          src="https://hackmd.io/_uploads/BJQY4pyF2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>Prompt 內的分隔符號、末端的形狀</span><br />
+        <img
+          src="https://hackmd.io/_uploads/SkOY46kK3.png"
+          alt=""
+          loading="lazy"
+        /><br />
+        <img
+          src="https://hackmd.io/_uploads/HJl2KNakF3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>Your choice here: (My choice 1)</span><br />
+        <img
+          src="https://hackmd.io/_uploads/rkz5Epkt3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>Your choice here : (My choice 2)</span><br />
+        <img
+          src="https://hackmd.io/_uploads/HyP9Eayth.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>如果是分成兩行，可以幫第一行左右 Prompt 加連接線</span><br />
+        <img
+          src="https://hackmd.io/_uploads/r1A9VTJt2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>如果是分成兩行，可以為末端設定 Frame 風格，多一個圓弧線條</span
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/SJQiN61Fn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>設定兩次指令之間的 Prompt 空間 (My choice 1)</span><br />
+        <img
+          src="https://hackmd.io/_uploads/BJdjEaJFh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span
+          >會讓 Prompt 看起來更符合閱讀的語意，例如「on」某個
+          branch、「took」幾秒 (My choice 1)</span
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/SyajETyt3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>Select No (n)</span><br />
+        <img
+          src="https://hackmd.io/_uploads/HkIC4X02h.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>Your own choice: (My Choice -&gt; n)</span><br />
+        <img
+          src="https://hackmd.io/_uploads/HJGhN61Kn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>Choice 1</span><br />
+        <img
+          src="https://hackmd.io/_uploads/HJ_34T1tn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>Type “y” and enter.</span><br />
+        <img
+          src="https://hackmd.io/_uploads/Byn3VTyK3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/B1Q6VT1Y3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>The powerlevel10k configuration file (</span
+        ><strong><span>.p10k.zsh</span></strong
+        ><span>) is located in home directory.</span><br />
+        <span>Open it and edit it.</span><br />
+        <img
+          src="https://hackmd.io/_uploads/BJFpNaJt3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span
+          >Add additional information in iTerm, such as “ram” &amp;
+          “wifi”.</span
+        ><br />
+        <span
+          >For development, it’s important to know the available memory and
+          network environment.</span
+        >
+      </p>
+      <ul>
+        <li>
+          <span>Uncomment (</span><strong><span>delete #</span></strong
+          ><span>) on the “ram” and “wifi” entry.</span>
+        </li>
+        <li><span>Comment the “time” by adding “#”</span></li>
+        <li><span>Save it.</span></li>
+      </ul>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/B10pVTyF3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/BJ6TtUxcn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>OS Icon (</span
+        ><a
+          href="https://www.nerdfonts.com/cheat-sheet"
+          target="_blank"
+          rel="noopener"
+          ><span>https://www.nerdfonts.com/cheat-sheet</span></a
+        ><span>) - You can find your favourite icon from cheat-sheet.</span>
+      </p>
+      <p>
+        <strong
+          ><span
+            >Uncomment (remove the # at the beginning) on the line below
+            ~/.p10k.zsh &amp; update your icon.</span
+          ></strong
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/SyYgrp1t3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/ByW5wQRhh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span>Change Background Color (if you want)</span><br />
+        <img
+          src="https://hackmd.io/_uploads/BkBZBp1Fn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/ByW5wQRhh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <strong
+          ><span
+            >[Reference Only, you don’t have to refer it, if you can setup all
+            the above after the steps]</span
+          ></strong
+        ><br />
+        <span
+          >Here are my config files for your reference (If you can’t access,
+          please raise it to Tutor/ TA)</span
+        >
+      </p>
+      <ul>
+        <li>
+          <a
+            href="https://github.com/hk-java/laptop-setup/blob/main/zsh/mac/.zshrc"
+            target="_blank"
+            rel="noopener"
+            ><span>.zshrc</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/hk-java/laptop-setup/blob/main/zsh/mac/.zprofile"
+            target="_blank"
+            rel="noopener"
+            ><span>.zprofile</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/hk-java/laptop-setup/blob/main/zsh/mac/.p10k.zsh"
+            target="_blank"
+            rel="noopener"
+            ><span>.p10k.zsh</span></a
+          >
+        </li>
+      </ul>
+      <h3 id="Part-5-JDK" data-id="Part-5-JDK">
+        <a class="anchor hidden-xs" href="#Part-5-JDK" title="Part-5-JDK"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Part 5: JDK</span>
+      </h3>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/ByPBSpkKh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/ry9SHTyY2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li>
+          <span
+            >As a Java developer, you have to download JDK (Java Development
+            Kit) for Java Development. We will further explore JDK/ JRE/ JVM
+            later on. Let’s start the installation first.</span
+          >
+        </li>
+        <li>
+          <span
+            >For Mac with apple chip M1/ M2, it is recommended to use Azul Zulu
+            OpenJDK, which has better performance in terms of compilation time;
+            for Intel chip, there is no big difference between various JDKs,
+            let’s use Zulu.</span
+          >
+        </li>
+        <li>
+          <span
+            >Let’s use JDK 17 (not 18), which is a LTS version (Long Term
+            Support).</span
+          >
+        </li>
+        <li>
+          <strong
+            ><span
+              >If you have installed JDK before, but not version 17, please
+              still proceed this section.</span
+            ></strong
+          >
+        </li>
+        <li></li>
+      </ul>
+      <h3
+        id="51-Install-Azul-Zulu-JDK-17"
+        data-id="51-Install-Azul-Zulu-JDK-17"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#51-Install-Azul-Zulu-JDK-17"
+          title="51-Install-Azul-Zulu-JDK-17"
+          ><span class="octicon octicon-link"></span></a
+        ><span>5.1 Install Azul Zulu JDK 17</span>
+      </h3>
+      <p>
+        <span>Official - </span
+        ><a
+          href="https://www.azul.com/downloads/?version=java-17-lts&amp;package=jdk#zulu"
+          target="_blank"
+          rel="noopener"
+          ><span>OpenJDK Azul Zulu Download</span></a
+        ><br />
+        <span
+          >Download and install it (as of 22-Jun, version up to 17.42.19).
+          Follow the steps to complete the installation.</span
+        >
+      </p>
+      <ul>
+        <li>
+          <strong><span>Apple chip</span></strong
+          ><span>, go for </span><strong><span>ARM 64-bit</span></strong>
+        </li>
+        <li>
+          <strong><span>Intel chip</span></strong
+          ><span>, go for </span><strong><span>86 64-bit</span></strong
+          ><br />
+          <img
+            src="https://hackmd.io/_uploads/ByFFrakFn.png"
+            alt=""
+            loading="lazy"
+          />
+        </li>
+      </ul>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <ul>
+        <li><span>Check the default java_home on Mac</span></li>
+      </ul>
+      <pre><code>/usr/libexec/java_home -V
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/r1Y9r6kY3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li>
+          <span>Setup environment variable for JAVA_HOME in </span
+          ><mark><span>.zshrc</span></mark
+          ><span> in Home directory.</span>
+        </li>
+        <li>
+          <strong
+            ><span>After update, SAVE file, restart the iTerm2</span></strong
+          >
+        </li>
+      </ul>
+      <pre><code>export JAVA_HOME=$(/usr/libexec/java_home)
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/HJijrakKh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <ul>
+        <li>
+          <span>Check $JAVA_HOME, it should return the installed JDK</span>
+        </li>
+      </ul>
+      <pre><code>echo $JAVA_HOME
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/SyThBTkFn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li><span>Check Java Version</span></li>
+      </ul>
+      <pre><code>java --version
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/rkKTSaytn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h4
+        id="52-Reference-Only-Skip-it-Switch-installed-JDKs"
+        data-id="52-Reference-Only-Skip-it-Switch-installed-JDKs"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#52-Reference-Only-Skip-it-Switch-installed-JDKs"
+          title="52-Reference-Only-Skip-it-Switch-installed-JDKs"
+          ><span class="octicon octicon-link"></span></a
+        ><span>5.2 </span><mark><span>[Reference Only, Skip it]</span></mark
+        ><span> Switch installed JDKs</span>
+      </h4>
+      <div class="alert alert-danger">
+        <p><span>JDK 21 LTS is coming out (Target Sep 2023)</span></p>
+      </div>
+      <ul>
+        <li><span>You can check the zulu version from azul later on.</span></li>
+        <li>
+          <span
+            >You can install more than one JDK (Different JDK version or JDK
+            provider)</span
+          ><br />
+          <span>You can check all JDKs installed:</span>
+        </li>
+      </ul>
+      <pre><code>/usr/libexec/java_home -V
+</code></pre>
+      <p>
+        <strong><span>[result check]</span></strong
+        ><span>
+          Shows Java 11 &amp; Java 17 are installed in different path</span
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/Hy6xIa1Kh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p><span>Switch to another JDK version by:</span></p>
+      <pre><code>export JAVA_HOME=$(/usr/libexec/java_home -v 11) #switch to java 11
+export JAVA_HOME=$(/usr/libexec/java_home -v 17) #switch to java 17
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/SJn-86kF2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h3 id="Part-6-Git" data-id="Part-6-Git">
+        <a class="anchor hidden-xs" href="#Part-6-Git" title="Part-6-Git"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Part 6: Git</span>
+      </h3>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/BJUMLa1Fn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li><span>DevOps tool used for source code management.</span></li>
+        <li>
+          <span
+            >Free and open-source version control system used to handle small to
+            very large projects efficiently.</span
+          >
+        </li>
+        <li>
+          <span
+            >Tracks changes in the source code, enabling multiple developers to
+            work together on non-linear development.</span
+          >
+        </li>
+        <li>
+          <mark
+            ><span
+              >There is a built-in git installed in Mac OS, apple-git. Not
+              recommend to use it, as sometime git may have bug fix version. To
+              upgrade the git easily, we use brew to install it.</span
+            ></mark
+          >
+        </li>
+      </ul>
+      <h4 id="61-Install-Git" data-id="61-Install-Git">
+        <a
+          class="anchor hidden-xs"
+          href="#61-Install-Git"
+          title="61-Install-Git"
+          ><span class="octicon octicon-link"></span></a
+        ><span>6.1 Install Git</span>
+      </h4>
+      <ul>
+        <li><span>Type the following command</span></li>
+        <li><span>Restart iTerm2 to refresh the path</span></li>
+      </ul>
+      <pre><code>brew install git
+</code></pre>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <ul>
+        <li>
+          <span
+            >“where git” to check what git versions are installed. There are 2
+            git versions installed below, /usr/bin/git is the apple-git where
+            “/opt/homebrew/…” is the one you installed by brew.</span
+          >
+        </li>
+        <li>
+          <span
+            >“which git” to check which git version you are currently
+            using.</span
+          >
+        </li>
+      </ul>
+      <pre><code>git --version
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/H1Ew8aJFh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span
+          >If you have more than one git path, check the $PATH, ensure brew path
+          come first.</span
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/rJKvUpyK3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h3 id="62-Create-Github-account" data-id="62-Create-Github-account">
+        <a
+          class="anchor hidden-xs"
+          href="#62-Create-Github-account"
+          title="62-Create-Github-account"
+          ><span class="octicon octicon-link"></span></a
+        ><span>6.2 Create Github account</span>
+      </h3>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/rkpKUTJth.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li>
+          <span
+            >As a developer, create a github account to start your
+            journey.</span
+          >
+        </li>
+        <li>
+          <span>Create your own </span
+          ><a href="https://github.com" target="_blank" rel="noopener"
+            ><span>Github Account</span></a
+          ><span> [ignore if you have created before].</span>
+        </li>
+        <li>
+          <span>Update your github account info (</span
+          ><a
+            href="https://hackmd.io/0L9QRERCSWSmeTEiIt4Q3w"
+            target="_blank"
+            rel="noopener"
+            ><span>https://hackmd.io/0L9QRERCSWSmeTEiIt4Q3w</span></a
+          ><span>)</span>
+        </li>
+        <li>
+          <span
+            >It is a well known open source repository for sharing idea/
+            projects among the developers’ community. You will find lots of
+            useful projects/materials in github during your life as a developer.
+            Over 80 million developers are using github as of 2022.</span
+          >
+        </li>
+        <li>
+          <span
+            >You should store or backup your own projects/ material/ documents
+            by github, so that you can refer to it in the future easily.</span
+          >
+        </li>
+      </ul>
+      <h2 id="63-Setup-SSH-key" data-id="63-Setup-SSH-key">
+        <a
+          class="anchor hidden-xs"
+          href="#63-Setup-SSH-key"
+          title="63-Setup-SSH-key"
+          ><span class="octicon octicon-link"></span></a
+        ><span>6.3 Setup SSH key</span>
+      </h2>
+      <p>
+        <a
+          href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
+          target="_blank"
+          rel="noopener"
+          ><span>Generate ssh key - from github</span></a
+        >
+      </p>
+      <ol>
+        <li><span>Open Terminal</span></li>
+        <li>
+          <span
+            >Generate SSH key (by ed25519). Type this command to generate ssh
+            key in your laptop ~/.ssh</span
+          >
+        </li>
+      </ol>
+      <pre><code>ssh-keygen -t ed25519 -C "your_email@example.com"
+</code></pre>
+      <ol start="3">
+        <li>
+          <mark
+            ><strong><span>[Just Enter]</span></strong></mark
+          ><span> Prompted to “Enter a file in which to save the key,” </span
+          ><strong><span>press Enter</span></strong
+          ><span>. Accept default location.</span>
+        </li>
+      </ol>
+      <pre><code>&gt; Enter a file in which to save the key 
+(/Users/you/.ssh/id_algorithm): [Press enter]
+</code></pre>
+      <ol start="4">
+        <li>
+          <mark
+            ><strong><span>[Just Enter]</span></strong></mark
+          ><span> At the prompt, ask for a secure passphrase. Suggest to </span
+          ><strong><span>press “enter” to skip.</span></strong>
+        </li>
+      </ol>
+      <pre><code>&gt; Enter passphrase (empty for no passphrase): [Type a passphrase]
+&gt; Enter same passphrase again: [Type passphrase again]
+</code></pre>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/rkheP61F3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h2
+        id="64-Insert-ssh-key-to-Github-ac"
+        data-id="64-Insert-ssh-key-to-Github-ac"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#64-Insert-ssh-key-to-Github-ac"
+          title="64-Insert-ssh-key-to-Github-ac"
+          ><span class="octicon octicon-link"></span></a
+        ><span>6.4 Insert ssh key to Github a/c</span>
+      </h2>
+      <ol>
+        <li>
+          <p><span>Login your github account</span></p>
+        </li>
+        <li>
+          <p>
+            <span>Click the icon at the right top corner, Go to </span
+            ><strong><span>Settings</span></strong
+            ><span>.</span><br />
+            <img
+              src="https://hackmd.io/_uploads/By0bD6yFh.png"
+              alt=""
+              loading="lazy"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <span>Go to </span><strong><span>SSH and GPG keys</span></strong
+            ><span>, and press N**ew SSH key</span><br />
+            <img
+              src="https://hackmd.io/_uploads/rJQfPpkth.png"
+              alt=""
+              loading="lazy"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <span>Place the whole content of </span
+            ><strong
+              ><mark><span>id_ed25519.pub</span></mark
+              ><span>(public key)</span></strong
+            ><span> to “Key” section shown below.</span>
+          </p>
+        </li>
+        <li>
+          <p>
+            <span>For title, simply put your email address.</span><br />
+            <img
+              src="https://hackmd.io/_uploads/SJaTvp1Yh.png"
+              alt=""
+              loading="lazy"
+            />
+          </p>
+        </li>
+      </ol>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <p>
+        <span
+          >After adding the ssh key, you can download the github repository by </span
+        ><mark><span>git clone</span></mark
+        ><span> using </span><mark><span>SSH</span></mark
+        ><span> (You will use it in later installation part).</span><br />
+        <img
+          src="https://hackmd.io/_uploads/SJmyu6kY2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h2 id="65-Git-Config" data-id="65-Git-Config">
+        <a class="anchor hidden-xs" href="#65-Git-Config" title="65-Git-Config"
+          ><span class="octicon octicon-link"></span></a
+        ><span>6.5 Git Config</span>
+      </h2>
+      <ul>
+        <li>
+          <span
+            >Change your name &amp; email address. Execute the following
+            commands in Terminal.</span
+          >
+        </li>
+      </ul>
+      <pre><code># set your name when using git
+git config --global user.name "your name"
+# set your email address when using git
+git config --global user.email "your_email@gmail.com"
+# default branch name when using git (set to main)
+git config --global init.defaultBranch main
+# Set pager off for git branch
+git config --global pager.branch false
+# set pager off for git diff
+git config --global pager.diff false
+</code></pre>
+      <p>
+        <span>Sample Screenshot:</span><br />
+        <img
+          src="https://hackmd.io/_uploads/HyJxaIl93.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p><span>Manually create the file and place to home directory.</span></p>
+      <ul>
+        <li>
+          <span>Add a </span><code>.gitignore_global</code
+          ><span> file in home folder</span>
+        </li>
+        <li>
+          <span
+            >Inside the folder, add those file names that you want Git to ignore
+            before you “git push”</span
+          >
+        </li>
+      </ul>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/SJQ2AUec3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/ryhJ0Ul9n.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/SJQ2AUec3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/rkf0CUl9n.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h2 id="Part-7-Apache-Maven" data-id="Part-7-Apache-Maven">
+        <a
+          class="anchor hidden-xs"
+          href="#Part-7-Apache-Maven"
+          title="Part-7-Apache-Maven"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Part 7: Apache Maven</span>
+      </h2>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/rJRWupkt2.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li>
+          <span
+            >Project management and comprehension tool that provides developers
+            a complete build lifecycle framework.</span
+          >
+        </li>
+        <li>
+          <span
+            >Development teams can automate the project’s “build” infrastructure
+            in almost no time as Maven uses a standard directory layout and a
+            default build lifecycle.</span
+          >
+        </li>
+        <li>
+          <span
+            >You will learn and use it when developing a Java &amp; Springboot
+            application.</span
+          >
+        </li>
+      </ul>
+      <h3 id="71-Install-Maven-3" data-id="71-Install-Maven-3">
+        <a
+          class="anchor hidden-xs"
+          href="#71-Install-Maven-3"
+          title="71-Install-Maven-3"
+          ><span class="octicon octicon-link"></span></a
+        ><span>7.1 Install Maven 3</span>
+      </h3>
+      <ul>
+        <li>
+          <span
+            >By brew, you will get the latest stable version automatically, such
+            as 3.8.6</span
+          >
+        </li>
+      </ul>
+      <pre><code>brew install maven
+</code></pre>
+      <div class="alert alert-success">
+        <p><span>Result Check</span></p>
+      </div>
+      <ul>
+        <li>
+          <span>Check maven version</span>
+          <ul>
+            <li>
+              <span>“Java version” should be the current java version</span>
+            </li>
+            <li><span>“Runtime path” should be same as java_home</span></li>
+            <li>
+              <span
+                >Maven home should be in opt/homebrew/…, as you install maven by
+                brew</span
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <pre><code>mvn -v
+</code></pre>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/r1J4OayK3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <span
+          >Make sure “/opt/homebrew/…” is set in $PATH (Should be set
+          automatically after installed homebrew, refer to Part 1).</span
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/HJ2NdpJK3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h2
+        id="Part-8-VSCode-Visual-Studio-Code"
+        data-id="Part-8-VSCode-Visual-Studio-Code"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#Part-8-VSCode-Visual-Studio-Code"
+          title="Part-8-VSCode-Visual-Studio-Code"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Part 8: VSCode (Visual Studio Code)</span>
+      </h2>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/rJVS_pyt3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h3
+        id="We-will-use-VSCode-to-code-your-Java-amp-Springboot-programs-in-coming-weeks"
+        data-id="We-will-use-VSCode-to-code-your-Java-amp-Springboot-programs-in-coming-weeks"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#We-will-use-VSCode-to-code-your-Java-amp-Springboot-programs-in-coming-weeks"
+          title="We-will-use-VSCode-to-code-your-Java-amp-Springboot-programs-in-coming-weeks"
+          ><span class="octicon octicon-link"></span></a
+        ><span
+          >We will use VSCode to code your Java &amp; Springboot programs in
+          coming weeks!</span
+        >
+      </h3>
+      <ul>
+        <li>
+          <span
+            >Visual Studio Code is a lightweight but powerful source code editor
+            which runs on your desktop and is available for Windows, macOS and
+            Linux.</span
+          >
+        </li>
+        <li>
+          <span
+            >If you have programming background and want to use “IntelliJ IDEA”
+            instead of VSCode, it’s fine, just an IDE. But I would still
+            recommend you to try VSCode, and feel how lightweight it is.</span
+          >
+        </li>
+      </ul>
+      <h3
+        id="81-Install-VSCode-from-Official-Site"
+        data-id="81-Install-VSCode-from-Official-Site"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#81-Install-VSCode-from-Official-Site"
+          title="81-Install-VSCode-from-Official-Site"
+          ><span class="octicon octicon-link"></span></a
+        ><span>8.1 Install VSCode from Official Site</span>
+      </h3>
+      <ul>
+        <li>
+          <p>
+            <a
+              href="https://code.visualstudio.com/download"
+              target="_blank"
+              rel="noopener"
+              ><span>VScode Download</span></a
+            ><span> - </span><strong><span>Mac OS 10.11 +</span></strong>
+          </p>
+        </li>
+        <li>
+          <p>
+            <span>Be aware of “</span><strong><span>apple</span></strong
+            ><span>” or “</span><strong><span>intel</span></strong
+            ><span>” chip</span><br />
+            <img
+              src="https://hackmd.io/_uploads/Hy8__TJKn.png"
+              alt=""
+              loading="lazy"
+            />
+          </p>
+        </li>
+        <li>
+          <p><span>After downloading and install it.</span></p>
+        </li>
+        <li>
+          <p>
+            <span>Move to Application.</span><br />
+            <img
+              src="https://hackmd.io/_uploads/ryqdO6kKn.png"
+              alt=""
+              loading="lazy"
+            />
+          </p>
+        </li>
+      </ul>
+      <h3
+        id="82-Install-‘code’-shell-command"
+        data-id="82-Install-‘code’-shell-command"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#82-Install-‘code’-shell-command"
+          title="82-Install-‘code’-shell-command"
+          ><span class="octicon octicon-link"></span></a
+        ><span>8.2 Install ‘code’ shell command</span>
+      </h3>
+      <ul>
+        <li>
+          <span>Launch VScode.app, </span
+          ><mark
+            ><strong><span>shift+command+p</span></strong></mark
+          ><span>, type “install code” to execute the shell command</span><br />
+          <img
+            src="https://hackmd.io/_uploads/BySh_p1K2.png"
+            alt=""
+            loading="lazy"
+          />
+        </li>
+      </ul>
+      <p>
+        <span>[Result check] Then, you will find “</span
+        ><strong><span>code</span></strong
+        ><span>” is placed in </span
+        ><strong
+          ><mark><span>/usr/local/bin</span></mark></strong
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/BJU5_pJY3.png"
+          alt=""
+          loading="lazy"
+        /><br />
+        <span
+          >Next time you want launch the VSCode, just simply type “code .” in
+          terminal (iTerm). </span
+        ><strong><span>(i.e. There is a space between code and .)</span></strong
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/B1u6da1Yh.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h3 id="83-Extensions" data-id="83-Extensions">
+        <a class="anchor hidden-xs" href="#83-Extensions" title="83-Extensions"
+          ><span class="octicon octicon-link"></span></a
+        ><span>8.3 Extensions</span>
+      </h3>
+      <ul>
+        <li>
+          <p>
+            <span
+              >Explorer / Search / Extensions are common functions in VScode.
+              Put it in the menu bar on the left hand side of VSCode. (right
+              click and select)</span
+            ><br />
+            <img
+              src="https://hackmd.io/_uploads/HJGAdpJt3.png"
+              alt=""
+              loading="lazy"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <span
+              >Extensions in VSCode help it become an integrated IDE with
+              powerful functions, like color themes/ syntax management/ icon
+              setting/ text color for different file types. All of those
+              features enable you to code much more easily in VSCode.</span
+            ><br />
+            <img
+              src="https://hackmd.io/_uploads/rkPAOaJK3.png"
+              alt=""
+              loading="lazy"
+            />
+          </p>
+        </li>
+      </ul>
+      <p><span>You can install all of the extensions below:</span></p>
+      <ul>
+        <li>
+          <mark><span>Language Support for Java™ by Red Hat</span></mark>
+        </li>
+        <li>
+          <mark
+            ><span
+              >Extension Pack for Java (Install this, the other 4 Java</span
+            ></mark
+          ><span> extensions will be installed automatically)</span>
+        </li>
+        <li>
+          <mark><span>Maven for Java</span></mark>
+        </li>
+        <li>
+          <mark><span>Debugger for Java</span></mark>
+        </li>
+        <li>
+          <mark><span>Project Manager for Java</span></mark>
+        </li>
+        <li>
+          <mark><span>Test Runner for Java</span></mark>
+        </li>
+        <li>
+          <mark><span>Ayu (teabyii)</span></mark>
+        </li>
+        <li>
+          <mark><span>Prettier - Code formatter</span></mark>
+        </li>
+        <li>
+          <mark><span>One Dark Pro (binaryify)</span></mark>
+        </li>
+        <li>
+          <mark><span>Spring Initializr Java Support</span></mark>
+        </li>
+        <li>
+          <mark><span>Spring Boot Tools</span></mark>
+        </li>
+        <li>
+          <mark><span>Spring Boot Dashboard</span></mark>
+        </li>
+        <li>
+          <mark><span>Spring Boot Extension Pack</span></mark>
+        </li>
+        <li>
+          <mark><span>Lombok Annotations Support for VS Code</span></mark>
+        </li>
+        <li>
+          <mark><span>XML</span></mark>
+        </li>
+        <li>
+          <mark><span>YAML</span></mark>
+        </li>
+        <li>
+          <mark><span>SQL Beautify</span></mark>
+        </li>
+        <li>
+          <mark><span>Dependency Analytics</span></mark>
+        </li>
+        <li>
+          <mark><span>Markdown Preview Enhanced</span></mark>
+        </li>
+      </ul>
+      <h3
+        id="84-Code-Formatter-settingsjson-key-shortcut"
+        data-id="84-Code-Formatter-settingsjson-key-shortcut"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#84-Code-Formatter-settingsjson-key-shortcut"
+          title="84-Code-Formatter-settingsjson-key-shortcut"
+          ><span class="octicon octicon-link"></span></a
+        ><span>8.4 Code Formatter/ settings.json/ key shortcut</span>
+      </h3>
+      <h4
+        id="Step-1-VSCode-general-setting---settingsjson"
+        data-id="Step-1-VSCode-general-setting---settingsjson"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#Step-1-VSCode-general-setting---settingsjson"
+          title="Step-1-VSCode-general-setting---settingsjson"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Step 1: VSCode general setting - settings.json</span>
+      </h4>
+      <p>
+        <strong
+          ><span>In VSCode, press </span
+          ><mark><span>shift+command+p</span></mark
+          ><span
+            >, type “open user settings json” and select “Open User
+            Settings(JSON)”</span
+          ></strong
+        ><span>.</span>
+      </p>
+      <p>
+        <span>Overwrite your settings.json by </span
+        ><a
+          href="https://github.com/hk-java/laptop-setup/blob/main/vscode/setting/mac/settings.json"
+          target="_blank"
+          rel="noopener"
+          ><span>settings.json</span></a
+        ><span> in github/hk-java.</span><br />
+        <img
+          src="https://hackmd.io/_uploads/SJcXFp1Fn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h4 id="Result2" data-id="Result">
+        <a class="anchor hidden-xs" href="#Result2" title="Result2"
+          ><span class="octicon octicon-link"></span></a
+        ><span>[Result]</span>
+      </h4>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/HkZNtTyYn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h4
+        id="Step-2-VSCode-Code-Formatter---googlestylexml"
+        data-id="Step-2-VSCode-Code-Formatter---googlestylexml"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#Step-2-VSCode-Code-Formatter---googlestylexml"
+          title="Step-2-VSCode-Code-Formatter---googlestylexml"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Step 2: VSCode Code Formatter - googlestyle.xml</span>
+      </h4>
+      <p>
+        <span
+          >CodeFormatter helps you auto-format your code to align maven
+          checkstyle/pmd plugin.</span
+        ><br />
+        <span>From github laptop-setup, download the </span
+        ><a
+          href="https://github.com/hk-java/laptop-setup/blob/main/vscode/code-formatter/java/googlestyle.xml"
+          target="_blank"
+          rel="noopener"
+          ><span>googlestyle.xml</span></a
+        ><span> into the folder </span><strong><span>~/.vscode</span></strong
+        ><br />
+        <img
+          src="https://hackmd.io/_uploads/HkWLtT1F3.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/SJSUYTyYn.png"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <ul>
+        <li>
+          <p>
+            <strong><span>In VSCode</span></strong
+            ><span>, </span><mark><span>shift+command+p</span></mark
+            ><span>, type “open user settings json” and select </span
+            ><strong><span>“Open User Settings(JSON)”</span></strong
+            ><span>.</span>
+          </p>
+        </li>
+        <li>
+          <p>
+            <span>As you have downloaded it to </span
+            ><mark><span>~/.vscode/googlestyle.xml</span></mark
+            ><span>, just update this path to java.format.settings.url</span
+            ><br />
+            <img
+              src="https://hackmd.io/_uploads/SJMtYakF3.png"
+              alt=""
+              loading="lazy"
+            />
+          </p>
+        </li>
+        <li>
+          <p>
+            <span>Double Check </span><strong><span>“lineSplit”</span></strong
+            ><span> to 80 and </span
+            ><strong><span>“comment.line_length”</span></strong
+            ><span> to 200.</span><br />
+            <img
+              src="https://hackmd.io/_uploads/rJUYtTJY2.png"
+              alt=""
+              loading="lazy"
+            />
+          </p>
+        </li>
+      </ul>
+      <h4
+        id="step-3-VSCode-keyboard-shortcut---keybindingsjson"
+        data-id="step-3-VSCode-keyboard-shortcut---keybindingsjson"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#step-3-VSCode-keyboard-shortcut---keybindingsjson"
+          title="step-3-VSCode-keyboard-shortcut---keybindingsjson"
+          ><span class="octicon octicon-link"></span></a
+        ><span>step 3: VSCode keyboard shortcut - keybindings.json</span>
+      </h4>
+      <ul>
+        <li>
+          <p>
+            <span>In </span><strong><span>VSCode</span></strong
+            ><span>, </span><mark><span>shift+command+p</span></mark
+            ><span>, type </span
+            ><strong><span>“keyboard shortcuts json”</span></strong
+            ><span> &amp; select </span
+            ><strong><span>“Open Keyboard Shortcut(JSON)”</span></strong>
+          </p>
+        </li>
+        <li>
+          <p>
+            <span
+              >You can find the setup file for “Keyboard Shortcuts (JSON)” in
+              github </span
+            ><a
+              href="https://github.com/hk-java/laptop-setup/blob/main/vscode/keyboard-shortcut/mac/keybindings.json"
+              target="_blank"
+              rel="noopener"
+              ><span>keybindings.json</span></a
+            >
+          </p>
+        </li>
+        <li>
+          <p>
+            <span
+              >Copy the file content to the above keybindings.json file.</span
+            ><br />
+            <span>These are the shortcuts that you would frequently use:</span>
+          </p>
+          <ul>
+            <li>
+              <mark><span>shift+cmd+f</span></mark
+              ><span>: Auto format the code</span>
+            </li>
+            <li>
+              <mark><span>shift+cmd+o</span></mark
+              ><span> : Organize java Imports, remove unused Imports</span>
+            </li>
+            <li>
+              <mark><span>shift+cmd+k</span></mark
+              ><span> : Restart VSCode</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h4 id="Result3" data-id="Result">
+        <a class="anchor hidden-xs" href="#Result3" title="Result3"
+          ><span class="octicon octicon-link"></span></a
+        ><span>[Result]</span>
+      </h4>
+      <ul>
+        <li>
+          <span>To let the above configurations take effect, you have to </span
+          ><strong
+            ><span>restart the VSCode (you can just </span
+            ><mark><span>shift+cmd+k</span></mark
+            ><span>)</span></strong
+          >
+        </li>
+      </ul>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/HJ9W00yK2.jpg"
+          alt=""
+          loading="lazy"
+        />
+      </p>
+      <h2 id="Part-9-Others" data-id="Part-9-Others">
+        <a class="anchor hidden-xs" href="#Part-9-Others" title="Part-9-Others"
+          ><span class="octicon octicon-link"></span></a
+        ><span>Part 9 Others</span>
+      </h2>
+      <h3
+        id="91-Unexpected-file-created---DS_Store"
+        data-id="91-Unexpected-file-created---DS_Store"
+      >
+        <a
+          class="anchor hidden-xs"
+          href="#91-Unexpected-file-created---DS_Store"
+          title="91-Unexpected-file-created---DS_Store"
+          ><span class="octicon octicon-link"></span></a
+        ><span>9.1 Unexpected file created - .DS_Store</span>
+      </h3>
+      <p>
+        <img
+          src="https://hackmd.io/_uploads/rkZb0Rkth.png"
+          alt=""
+          loading="lazy"
+        /><br />
+        <span>**[Solution]</span>
+      </p>
+      <p><span>** Disable the DS_Store file created</span></p>
+      <pre><code>defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+defaults write com.apple.desktopservices DSDontWriteUSBStores true
+</code></pre>
+    </div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display: none">
+      <div class="pull-right dropdown">
+        <a
+          id="tocLabel"
+          class="ui-toc-label btn btn-default"
+          data-toggle="dropdown"
+          href="#"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          title="Table of content"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+        <ul
+          id="ui-toc"
+          class="ui-toc-dropdown dropdown-menu"
+          aria-labelledby="tocLabel"
+        >
+          <div class="toc">
+            <ul class="nav">
+              <li>
+                <a
+                  href="#Software-Installation-Mac-OS"
+                  title="Software Installation (Mac OS)"
+                  >Software Installation (Mac OS)</a
+                >
+                <ul class="nav">
+                  <li class="invisable-node">
+                    <ul class="nav">
+                      <li>
+                        <a
+                          href="#Part-0-Prerequisites"
+                          title="Part 0: Prerequisites"
+                          >Part 0: Prerequisites</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#01-Show-Hidden-Folder"
+                          title="0.1 Show Hidden Folder"
+                          >0.1 Show Hidden Folder</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#02-Show-File-Extensions"
+                          title="0.2 Show File Extensions"
+                          >0.2 Show File Extensions</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#03-Mac-OS-Version" title="0.3 Mac OS Version"
+                          >0.3 Mac OS Version</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#Part-1-Homebrew" title="Part 1: Homebrew"
+                          >Part 1: Homebrew</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#10-Open-Terminal" title="1.0 Open Terminal"
+                          >1.0 Open Terminal</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#Part-2-iTerm2" title="Part 2: iTerm2"
+                          >Part 2: iTerm2</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#Part-3-ZSH" title="Part 3: ZSH"
+                          >Part 3: ZSH</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#Part-4-Oh-my-zsh" title="Part 4: Oh-my-zsh"
+                          >Part 4: Oh-my-zsh</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#41-Install-oh-my-zsh"
+                          title="4.1 Install oh-my-zsh"
+                          >4.1 Install oh-my-zsh</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#43-Install-New-Font"
+                          title="4.3 Install New Font"
+                          >4.3 Install New Font</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#44-Install-Powerlevel10k"
+                          title="4.4 Install Powerlevel10k"
+                          >4.4 Install Powerlevel10k</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#45-Change-theme-to-powerlevel10k"
+                          title="4.5 Change theme to powerlevel10k"
+                          >4.5 Change theme to powerlevel10k</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#46-Execute-zshrc-once-again"
+                          title="4.6 Execute .zshrc once again"
+                          >4.6 Execute .zshrc once again</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#47-Your-own-theme-style"
+                          title="4.7 Your own theme style"
+                          >4.7 Your own theme style</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#Part-5-JDK" title="Part 5: JDK"
+                          >Part 5: JDK</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#51-Install-Azul-Zulu-JDK-17"
+                          title="5.1 Install Azul Zulu JDK 17"
+                          >5.1 Install Azul Zulu JDK 17</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#Part-6-Git" title="Part 6: Git"
+                          >Part 6: Git</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#62-Create-Github-account"
+                          title="6.2 Create Github account"
+                          >6.2 Create Github account</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#63-Setup-SSH-key" title="6.3 Setup SSH key"
+                      >6.3 Setup SSH key</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#64-Insert-ssh-key-to-Github-ac"
+                      title="6.4 Insert ssh key to Github a/c"
+                      >6.4 Insert ssh key to Github a/c</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#65-Git-Config" title="6.5 Git Config"
+                      >6.5 Git Config</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#Part-7-Apache-Maven" title="Part 7: Apache Maven"
+                      >Part 7: Apache Maven</a
+                    >
+                    <ul class="nav">
+                      <li>
+                        <a
+                          href="#71-Install-Maven-3"
+                          title="7.1 Install Maven 3"
+                          >7.1 Install Maven 3</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a
+                      href="#Part-8-VSCode-Visual-Studio-Code"
+                      title="Part 8: VSCode (Visual Studio Code)"
+                      >Part 8: VSCode (Visual Studio Code)</a
+                    >
+                    <ul class="nav">
+                      <li>
+                        <a
+                          href="#We-will-use-VSCode-to-code-your-Java-amp-Springboot-programs-in-coming-weeks"
+                          title="We will use VSCode to code your Java &amp; Springboot programs in coming weeks!"
+                          >We will use VSCode to code your Java &amp; Springboot
+                          programs in coming weeks!</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#81-Install-VSCode-from-Official-Site"
+                          title="8.1 Install VSCode from Official Site"
+                          >8.1 Install VSCode from Official Site</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#82-Install-‘code’-shell-command"
+                          title="8.2 Install ‘code’ shell command"
+                          >8.2 Install ‘code’ shell command</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#83-Extensions" title="8.3 Extensions"
+                          >8.3 Extensions</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#84-Code-Formatter-settingsjson-key-shortcut"
+                          title="8.4 Code Formatter/ settings.json/ key shortcut"
+                          >8.4 Code Formatter/ settings.json/ key shortcut</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#Part-9-Others" title="Part 9 Others"
+                      >Part 9 Others</a
+                    >
+                    <ul class="nav">
+                      <li>
+                        <a
+                          href="#91-Unexpected-file-created---DS_Store"
+                          title="9.1 Unexpected file created - .DS_Store"
+                          >9.1 Unexpected file created - .DS_Store</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="toc-menu">
+            <a class="expand-toggle" href="#">全部展開</a
+            ><a class="back-to-top" href="#">回到頂部</a
+            ><a class="go-to-bottom" href="#">移至底部</a>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div
+      id="ui-toc-affix"
+      class="ui-affix-toc ui-toc-dropdown unselectable hidden-print"
+      data-spy="affix"
+      style="top: 17px; display: none"
+      null
+      null
+    >
+      <div class="toc">
+        <ul class="nav">
+          <li>
+            <a
+              href="#Software-Installation-Mac-OS"
+              title="Software Installation (Mac OS)"
+              >Software Installation (Mac OS)</a
+            >
+            <ul class="nav">
+              <li class="invisable-node">
+                <ul class="nav">
+                  <li>
+                    <a
+                      href="#Part-0-Prerequisites"
+                      title="Part 0: Prerequisites"
+                      >Part 0: Prerequisites</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#01-Show-Hidden-Folder"
+                      title="0.1 Show Hidden Folder"
+                      >0.1 Show Hidden Folder</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#02-Show-File-Extensions"
+                      title="0.2 Show File Extensions"
+                      >0.2 Show File Extensions</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#03-Mac-OS-Version" title="0.3 Mac OS Version"
+                      >0.3 Mac OS Version</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#Part-1-Homebrew" title="Part 1: Homebrew"
+                      >Part 1: Homebrew</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#10-Open-Terminal" title="1.0 Open Terminal"
+                      >1.0 Open Terminal</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#Part-2-iTerm2" title="Part 2: iTerm2"
+                      >Part 2: iTerm2</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#Part-3-ZSH" title="Part 3: ZSH">Part 3: ZSH</a>
+                  </li>
+                  <li>
+                    <a href="#Part-4-Oh-my-zsh" title="Part 4: Oh-my-zsh"
+                      >Part 4: Oh-my-zsh</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#41-Install-oh-my-zsh"
+                      title="4.1 Install oh-my-zsh"
+                      >4.1 Install oh-my-zsh</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#43-Install-New-Font" title="4.3 Install New Font"
+                      >4.3 Install New Font</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#44-Install-Powerlevel10k"
+                      title="4.4 Install Powerlevel10k"
+                      >4.4 Install Powerlevel10k</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#45-Change-theme-to-powerlevel10k"
+                      title="4.5 Change theme to powerlevel10k"
+                      >4.5 Change theme to powerlevel10k</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#46-Execute-zshrc-once-again"
+                      title="4.6 Execute .zshrc once again"
+                      >4.6 Execute .zshrc once again</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#47-Your-own-theme-style"
+                      title="4.7 Your own theme style"
+                      >4.7 Your own theme style</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#Part-5-JDK" title="Part 5: JDK">Part 5: JDK</a>
+                  </li>
+                  <li>
+                    <a
+                      href="#51-Install-Azul-Zulu-JDK-17"
+                      title="5.1 Install Azul Zulu JDK 17"
+                      >5.1 Install Azul Zulu JDK 17</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#Part-6-Git" title="Part 6: Git">Part 6: Git</a>
+                  </li>
+                  <li>
+                    <a
+                      href="#62-Create-Github-account"
+                      title="6.2 Create Github account"
+                      >6.2 Create Github account</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#63-Setup-SSH-key" title="6.3 Setup SSH key"
+                  >6.3 Setup SSH key</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#64-Insert-ssh-key-to-Github-ac"
+                  title="6.4 Insert ssh key to Github a/c"
+                  >6.4 Insert ssh key to Github a/c</a
+                >
+              </li>
+              <li>
+                <a href="#65-Git-Config" title="6.5 Git Config"
+                  >6.5 Git Config</a
+                >
+              </li>
+              <li>
+                <a href="#Part-7-Apache-Maven" title="Part 7: Apache Maven"
+                  >Part 7: Apache Maven</a
+                >
+                <ul class="nav">
+                  <li>
+                    <a href="#71-Install-Maven-3" title="7.1 Install Maven 3"
+                      >7.1 Install Maven 3</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="#Part-8-VSCode-Visual-Studio-Code"
+                  title="Part 8: VSCode (Visual Studio Code)"
+                  >Part 8: VSCode (Visual Studio Code)</a
+                >
+                <ul class="nav">
+                  <li>
+                    <a
+                      href="#We-will-use-VSCode-to-code-your-Java-amp-Springboot-programs-in-coming-weeks"
+                      title="We will use VSCode to code your Java &amp; Springboot programs in coming weeks!"
+                      >We will use VSCode to code your Java &amp; Springboot
+                      programs in coming weeks!</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#81-Install-VSCode-from-Official-Site"
+                      title="8.1 Install VSCode from Official Site"
+                      >8.1 Install VSCode from Official Site</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#82-Install-‘code’-shell-command"
+                      title="8.2 Install ‘code’ shell command"
+                      >8.2 Install ‘code’ shell command</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#83-Extensions" title="8.3 Extensions"
+                      >8.3 Extensions</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#84-Code-Formatter-settingsjson-key-shortcut"
+                      title="8.4 Code Formatter/ settings.json/ key shortcut"
+                      >8.4 Code Formatter/ settings.json/ key shortcut</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#Part-9-Others" title="Part 9 Others">Part 9 Others</a>
+                <ul class="nav">
+                  <li>
+                    <a
+                      href="#91-Unexpected-file-created---DS_Store"
+                      title="9.1 Unexpected file created - .DS_Store"
+                      >9.1 Unexpected file created - .DS_Store</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="toc-menu">
+        <a class="expand-toggle" href="#">全部展開</a
+        ><a class="back-to-top" href="#">回到頂部</a
+        ><a class="go-to-bottom" href="#">移至底部</a>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js"
+      integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script>
+      var markdown = $(".markdown-body");
+      //smooth all hash trigger scrolling
+      function smoothHashScroll() {
+        var hashElements = $("a[href^='#']").toArray();
+        for (var i = 0; i < hashElements.length; i++) {
+          var element = hashElements[i];
+          var $element = $(element);
+          var hash = element.hash;
+          if (hash) {
+            $element.on("click", function (e) {
+              // store hash
+              var hash = this.hash;
+              if ($(hash).length <= 0) return;
+              // prevent default anchor click behavior
+              e.preventDefault();
+              // animate
+              $("body, html")
+                .stop(true, true)
+                .animate(
+                  {
+                    scrollTop: $(hash).offset().top,
+                  },
+                  100,
+                  "linear",
+                  function () {
+                    // when done, add hash to url
+                    // (default click behaviour)
+                    window.location.hash = hash;
+                  }
+                );
+            });
+          }
+        }
+      }
+
+      smoothHashScroll();
+      var toc = $(".ui-toc");
+      var tocAffix = $(".ui-affix-toc");
+      var tocDropdown = $(".ui-toc-dropdown");
+      //toc
+      tocDropdown.click(function (e) {
+        e.stopPropagation();
+      });
+
+      var enoughForAffixToc = true;
+
+      function generateScrollspy() {
+        $(document.body).scrollspy({
+          target: "",
+        });
+        $(document.body).scrollspy("refresh");
+        if (enoughForAffixToc) {
+          toc.hide();
+          tocAffix.show();
+        } else {
+          tocAffix.hide();
+          toc.show();
+        }
+        $(document.body).scroll();
+      }
+
+      function windowResize() {
+        //toc right
+        var paddingRight = parseFloat(markdown.css("padding-right"));
+        var right =
+          $(window).width() -
+          (markdown.offset().left + markdown.outerWidth() - paddingRight);
+        toc.css("right", right + "px");
+        //affix toc left
+        var newbool;
+        var rightMargin =
+          (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+        //for ipad or wider device
+        if (rightMargin >= 133) {
+          newbool = true;
+          var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+          var left =
+            markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+          tocAffix.css("left", left + "px");
+        } else {
+          newbool = false;
+        }
+        if (newbool != enoughForAffixToc) {
+          enoughForAffixToc = newbool;
+          generateScrollspy();
+        }
+      }
+      $(window).resize(function () {
+        windowResize();
+      });
+      $(document).ready(function () {
+        windowResize();
+        generateScrollspy();
+      });
+
+      //remove hash
+      function removeHash() {
+        window.location.hash = "";
+      }
+
+      var backtotop = $(".back-to-top");
+      var gotobottom = $(".go-to-bottom");
+
+      backtotop.click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (scrollToTop) scrollToTop();
+        removeHash();
+      });
+      gotobottom.click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (scrollToBottom) scrollToBottom();
+        removeHash();
+      });
+
+      var toggle = $(".expand-toggle");
+      var tocExpand = false;
+
+      checkExpandToggle();
+      toggle.click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        tocExpand = !tocExpand;
+        checkExpandToggle();
+      });
+
+      function checkExpandToggle() {
+        var toc = $(".ui-toc-dropdown .toc");
+        var toggle = $(".expand-toggle");
+        if (!tocExpand) {
+          toc.removeClass("expand");
+          toggle.text("Expand all");
+        } else {
+          toc.addClass("expand");
+          toggle.text("Collapse all");
+        }
+      }
+
+      function scrollToTop() {
+        $("body, html").stop(true, true).animate(
+          {
+            scrollTop: 0,
+          },
+          100,
+          "linear"
+        );
+      }
+
+      function scrollToBottom() {
+        $("body, html")
+          .stop(true, true)
+          .animate(
+            {
+              scrollTop: $(document.body)[0].scrollHeight,
+            },
+            100,
+            "linear"
+          );
+      }
+    </script>
+  </body>
+</html>
