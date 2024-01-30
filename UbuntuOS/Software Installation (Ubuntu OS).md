@@ -4,7 +4,7 @@
 
 ### 0.1 Show Hidden Folder
 
-![Alt text](image.png)
+![Alt text](./asset/image.png)
 
 ## Part 1 : ZSH +Oh my Zsh + Power10k
 
@@ -14,13 +14,13 @@
 [Nerd Font](https://www.nerdfonts.com/font-downloads)
 
 and install it
-![Alt text](image-1.png)
+![Alt text](./asset/image-1.png)
 
 ### 1.2 Set the Terminal font and colour you like
 
-![Alt text](image-2.png)
+![Alt text](./asset/image-2.png)
 -> add the Profiles and set default
-![Alt text](image-3.png)
+![Alt text](./asset/image-3.png)
 
 ### 1.3 Install Zsh
 
@@ -85,7 +85,7 @@ p10k configure
 ```
 
 than U get nice Terminal here:
-![Alt text](image-4.png)
+![Alt text](./asset/image-4.png)
 
 ## Part 2: Install Git and SSH to Github
 
@@ -96,7 +96,7 @@ apt-get install git ##or
 sudo apt-get install git
 ```
 
-![Alt text](image-5.png)
+![Alt text](./asset/image-5.png)
 
 :::success
 Result Check
@@ -107,7 +107,7 @@ Result Check
 
 ```
 git --version
-![Alt text](image-6.png)
+![Alt text](./asset/image-6.png)
 ```
 
 ### 2.2 Setup SSH key
@@ -136,7 +136,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 :::success
 Result Check
 :::
-![Alt text](image-7.png)
+![Alt text](./asset/image-7.png)
 
 ### 2.3 Insert ssh key to Github a/c
 
@@ -224,7 +224,7 @@ OpenJDK Runtime Environment Zulu17.40+19-CA (build 17.0.6+10-LTS)
 OpenJDK 64-Bit Server VM Zulu17.40+19-CA (build 17.0.6+10-LTS, mixed mode, sharing)
 ```
 
-![Alt text](image-8.png)
+![Alt text](./asset/image-8.png)
 
 ## Part 4: Install Maven
 
@@ -248,15 +248,95 @@ sudo apt install maven
 mvn -version
 ```
 
-![Alt text](image-9.png)
+![Alt text](./asset/image-9.png)
 
-### Part 5: Install VSCode:
+## Part 5: Install VSCode:
 
-![Alt text](image-10.png)
+### Method 1: Install form Ubuntu Software
+
+![Alt text](./asset/image-10.png)
 find vscode
-![Alt text](image-11.png)
+![Alt text](./asset/image-11.png)
 
 and Install it
 
+### Method 2: Install form Terminal
+
+```shell
+sudo snap install --classic code
+```
+
+```shell
+code --version
+```
+
+### 5.5 Install VSCoding Plungins
+
 [My VSCode Setting](https://github.com/xxxJay123/vscode_setting)
-![Alt text](image-12.png)
+![Alt text](./asset/image-12.png)
+
+`VSCode > Setting > Profiles > Import Profile > Select Files > myvscode_setting.code-profile`
+
+## Part 6: Install Node.js
+
+### Node.js v21.x:
+
+#### Using Ubuntu
+
+```shell
+curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+```
+
+```shell
+node -v
+```
+
+#### Using Debian, as root
+
+```shell
+curl -fsSL https://deb.nodesource.com/setup_21.x | bash - &&\
+apt-get install -y nodejs
+```
+
+```shell
+node -v
+```
+
+### Node.js v18.x:
+
+#### Using Ubuntu
+
+```shell
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+```
+
+```shell
+node -v
+```
+
+#### Using Debian, as root
+
+```shell
+curl -fsSL https://deb.nodesource.com/setup_18.x | bash - &&\
+apt-get install -y nodejs
+```
+
+```shell
+node -v
+```
+
+## Part 7: Install Python
+
+```shell
+sudo apt install python3
+```
+
+![Alt text](./asset/image-13.png)
+
+```shell
+python3 --version
+```
+
+![Alt text](./asset/image-14.png)
