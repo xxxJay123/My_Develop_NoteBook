@@ -340,3 +340,27 @@ python3 --version
 ```
 
 ![Alt text](./asset/image-14.png)
+
+
+## Part 8: Database
+
+## Redis:
+You can install recent stable versions of Redis from the official packages.redis.io APT repository.
+
+- Prerequisites
+- If you're running a very minimal distribution (such as a Docker container) you may need to install lsb-release, curl and gpg first:
+
+```shell
+sudo apt install lsb-release curl gpg
+```
+
+Add the repository to the apt index, update it, and then install:
+
+```shell
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+
+sudo apt-get update
+sudo apt-get install redis
+```
