@@ -17,19 +17,19 @@
 - 自定義字體: https://www.nerdfonts.com/font-downloads
 
 perview:
-![alt text](./asset/image.png)
+![alt text](./asset/./asset/image.png)
 
 ## 2. WindTerm
 
 - 安裝方法: https://github.com/kingToolbox/WindTerm/releases/tag/2.6.0
-  ![alt text](./asset/image1.png)
+  ![alt text](./asset/./asset/image1.png)
 
 - price: **free**
 - github: https://github.com/kingToolbox/WindTerm
 - web: https://kingtoolbox.github.io/
 
 perview:
-![alt text](./asset/image2.png)
+![alt text](./asset/./asset/image2.png)
 
 ## 3. Xterminal
 
@@ -37,5 +37,5 @@ perview:
 - price: **free** && 會員制(要畀錢解鎖部分功能)
 
 perview:
-![alt text](./asset/image-2.png)
-![alt text](./asset/image-1.png)
+![alt text](./asset/./asset/image-2.png)
+![alt text](./asset/./asset/image-1.png)

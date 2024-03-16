@@ -4,7 +4,7 @@
 
 ### 0.1 Show Hidden Folder
 
-![Alt text](./asset/image.png)
+![Alt text](./asset/./asset/image.png)
 
 ## Part 1 : ZSH +Oh my Zsh + Power10k
 
@@ -14,13 +14,13 @@
 [Nerd Font](https://www.nerdfonts.com/font-downloads)
 
 and install it
-![Alt text](./asset/image-1.png)
+![Alt text](./asset/./asset/image-1.png)
 
 ### 1.2 Set the Terminal font and colour you like
 
-![Alt text](./asset/image-2.png)
+![Alt text](./asset/./asset/image-2.png)
 -> add the Profiles and set default
-![Alt text](./asset/image-3.png)
+![Alt text](./asset/./asset/image-3.png)
 
 ### 1.3 Install Zsh
 
@@ -85,7 +85,7 @@ p10k configure
 ```
 
 than U get nice Terminal here:
-![Alt text](./asset/image-4.png)
+![Alt text](./asset/./asset/image-4.png)
 
 ## Part 2: Install Git and SSH to Github
 
@@ -96,7 +96,7 @@ apt-get install git ##or
 sudo apt-get install git
 ```
 
-![Alt text](./asset/image-5.png)
+![Alt text](./asset/./asset/image-5.png)
 
 :::success
 Result Check
@@ -107,7 +107,7 @@ Result Check
 
 ```
 git --version
-![Alt text](./asset/image-6.png)
+![Alt text](./asset/./asset/image-6.png)
 ```
 
 ### 2.2 Setup SSH key
@@ -136,7 +136,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 :::success
 Result Check
 :::
-![Alt text](./asset/image-7.png)
+![Alt text](./asset/./asset/image-7.png)
 
 ### 2.3 Insert ssh key to Github a/c
 
@@ -224,7 +224,7 @@ OpenJDK Runtime Environment Zulu17.40+19-CA (build 17.0.6+10-LTS)
 OpenJDK 64-Bit Server VM Zulu17.40+19-CA (build 17.0.6+10-LTS, mixed mode, sharing)
 ```
 
-![Alt text](./asset/image-8.png)
+![Alt text](./asset/./asset/image-8.png)
 
 ## Part 4: Install Maven
 
@@ -248,15 +248,15 @@ sudo apt install maven
 mvn -version
 ```
 
-![Alt text](./asset/image-9.png)
+![Alt text](./asset/./asset/image-9.png)
 
 ## Part 5: Install VSCode:
 
 ### Method 1: Install form Ubuntu Software
 
-![Alt text](./asset/image-10.png)
+![Alt text](./asset/./asset/image-10.png)
 find vscode
-![Alt text](./asset/image-11.png)
+![Alt text](./asset/./asset/image-11.png)
 
 and Install it
 
@@ -273,7 +273,7 @@ code --version
 ### 5.5 Install VSCoding Plungins
 
 [My VSCode Setting](https://github.com/xxxJay123/vscode_setting)
-![Alt text](./asset/image-12.png)
+![Alt text](./asset/./asset/image-12.png)
 
 `VSCode > Setting > Profiles > Import Profile > Select Files > myvscode_setting.code-profile`
 
@@ -333,13 +333,13 @@ node -v
 sudo apt install python3
 ```
 
-![Alt text](./asset/image-13.png)
+![Alt text](./asset/./asset/image-13.png)
 
 ```shell
 python3 --version
 ```
 
-![Alt text](./asset/image-14.png)
+![Alt text](./asset/./asset/image-14.png)
 
 
 ## Part 8: Database
